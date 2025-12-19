@@ -1,33 +1,1486 @@
-<!doctype html>
-<html lang="">
+<!DOCTYPE html>
+<html lang="es-MX">
 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-  <meta name="description" content="">
+  <title>Directorio CDMX - El Directorio Empresarial #1 de la Ciudad de Mexico</title>
+  <meta name="description" content="Encuentra las mejores empresas y negocios en la Ciudad de Mexico. Directorio empresarial verificado con mas de 450,000 establecimientos en las 16 alcaldias de CDMX.">
+  <meta name="keywords" content="directorio empresas CDMX, negocios Ciudad de Mexico, empresas verificadas, directorio comercial, buscar empresas Mexico">
+  <meta name="author" content="Directorio CDMX">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://directorio-cdmx.com/">
 
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://directorio-cdmx.com/">
+  <meta property="og:title" content="Directorio CDMX - El Directorio Empresarial #1 de la Ciudad de Mexico">
+  <meta property="og:description" content="Encuentra las mejores empresas y negocios verificados en CDMX. Busca por categoria, alcaldia o nombre.">
+  <meta property="og:image" content="https://directorio-cdmx.com/img/og-image.jpg">
+  <meta property="og:locale" content="es_MX">
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://directorio-cdmx.com/">
+  <meta name="twitter:title" content="Directorio CDMX - Directorio Empresarial de la Ciudad de Mexico">
+  <meta name="twitter:description" content="Encuentra empresas verificadas en las 16 alcaldias de CDMX">
+  <meta name="twitter:image" content="https://directorio-cdmx.com/img/twitter-image.jpg">
+
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
   <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
+  <meta name="theme-color" content="#E91E63">
+
+  <!-- Preconnect to external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Directorio CDMX",
+    "url": "https://directorio-cdmx.com/",
+    "description": "El directorio empresarial mas completo de la Ciudad de Mexico",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://directorio-cdmx.com/buscar?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Directorio CDMX",
+    "url": "https://directorio-cdmx.com/",
+    "logo": "https://directorio-cdmx.com/img/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+52-55-1234-5678",
+      "contactType": "customer service",
+      "availableLanguage": "Spanish"
+    },
+    "sameAs": [
+      "https://www.facebook.com/directorio.cdmx",
+      "https://www.instagram.com/directorio.cdmx",
+      "https://www.linkedin.com/company/directorio-cdmx"
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <div class="top-bar-left">
+          <span><i class="fas fa-phone-alt"></i> +52 55 1234 5678</span>
+          <span><i class="fas fa-envelope"></i> contacto@directorio-cdmx.com</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="/" class="logo">
+          <span class="logo-icon"><i class="fas fa-building"></i></span>
+          <span class="logo-text">Directorio<span class="logo-accent">CDMX</span></span>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="#" class="nav-link active">Inicio</a></li>
+          <li class="dropdown">
+            <a href="#categorias" class="nav-link dropdown-toggle">Categorias <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fas fa-utensils"></i> Restaurantes</a></li>
+              <li><a href="#"><i class="fas fa-heartbeat"></i> Salud</a></li>
+              <li><a href="#"><i class="fas fa-gavel"></i> Servicios Legales</a></li>
+              <li><a href="#"><i class="fas fa-car"></i> Automotriz</a></li>
+              <li><a href="#"><i class="fas fa-home"></i> Bienes Raices</a></li>
+              <li><a href="#"><i class="fas fa-laptop-code"></i> Tecnologia</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a href="#categorias"><i class="fas fa-th"></i> Ver todas las categorias</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#alcaldias" class="nav-link dropdown-toggle">Alcaldias <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu dropdown-menu-grid">
+              <li><a href="#">Alvaro Obregon</a></li>
+              <li><a href="#">Azcapotzalco</a></li>
+              <li><a href="#">Benito Juarez</a></li>
+              <li><a href="#">Coyoacan</a></li>
+              <li><a href="#">Cuajimalpa</a></li>
+              <li><a href="#">Cuauhtemoc</a></li>
+              <li><a href="#">Gustavo A. Madero</a></li>
+              <li><a href="#">Iztacalco</a></li>
+              <li><a href="#">Iztapalapa</a></li>
+              <li><a href="#">Magdalena Contreras</a></li>
+              <li><a href="#">Miguel Hidalgo</a></li>
+              <li><a href="#">Milpa Alta</a></li>
+              <li><a href="#">Tlahuac</a></li>
+              <li><a href="#">Tlalpan</a></li>
+              <li><a href="#">Venustiano Carranza</a></li>
+              <li><a href="#">Xochimilco</a></li>
+            </ul>
+          </li>
+          <li><a href="#empresas-destacadas" class="nav-link">Destacados</a></li>
+          <li><a href="#blog" class="nav-link">Blog</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#" class="btn btn-outline btn-sm">Iniciar Sesion</a>
+          <a href="#" class="btn btn-primary btn-sm">Registrar Empresa</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-overlay"></div>
+        <div class="hero-pattern"></div>
+      </div>
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fas fa-shield-alt"></i>
+            <span>+453,000 Empresas Verificadas en CDMX</span>
+          </div>
+          <h1 class="hero-title">
+            Encuentra las Mejores <span class="text-gradient">Empresas</span> de la Ciudad de Mexico
+          </h1>
+          <p class="hero-subtitle">
+            El directorio empresarial mas completo y actualizado. Conectamos negocios con clientes en las 16 alcaldias de la CDMX.
+          </p>
+
+          <!-- Search Box -->
+          <div class="search-box">
+            <form class="search-form" id="search-form" action="/buscar" method="GET">
+              <div class="search-input-group">
+                <div class="search-field">
+                  <i class="fas fa-search"></i>
+                  <input type="text" id="search-query" name="q" placeholder="Buscar empresas, servicios o productos..." autocomplete="off">
+                </div>
+                <div class="search-divider"></div>
+                <div class="search-field">
+                  <i class="fas fa-map-marker-alt"></i>
+                  <select id="search-location" name="alcaldia">
+                    <option value="">Todas las alcaldias</option>
+                    <option value="alvaro-obregon">Alvaro Obregon</option>
+                    <option value="azcapotzalco">Azcapotzalco</option>
+                    <option value="benito-juarez">Benito Juarez</option>
+                    <option value="coyoacan">Coyoacan</option>
+                    <option value="cuajimalpa">Cuajimalpa de Morelos</option>
+                    <option value="cuauhtemoc">Cuauhtemoc</option>
+                    <option value="gustavo-a-madero">Gustavo A. Madero</option>
+                    <option value="iztacalco">Iztacalco</option>
+                    <option value="iztapalapa">Iztapalapa</option>
+                    <option value="magdalena-contreras">La Magdalena Contreras</option>
+                    <option value="miguel-hidalgo">Miguel Hidalgo</option>
+                    <option value="milpa-alta">Milpa Alta</option>
+                    <option value="tlahuac">Tlahuac</option>
+                    <option value="tlalpan">Tlalpan</option>
+                    <option value="venustiano-carranza">Venustiano Carranza</option>
+                    <option value="xochimilco">Xochimilco</option>
+                  </select>
+                </div>
+                <button type="submit" class="search-btn">
+                  <i class="fas fa-search"></i>
+                  <span>Buscar</span>
+                </button>
+              </div>
+            </form>
+            <div class="search-suggestions">
+              <span>Busquedas populares:</span>
+              <a href="#">Restaurantes</a>
+              <a href="#">Abogados</a>
+              <a href="#">Dentistas</a>
+              <a href="#">Talleres mecanicos</a>
+              <a href="#">Contadores</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Stats -->
+        <div class="hero-stats">
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-building"></i></div>
+            <div class="stat-content">
+              <span class="stat-number" data-count="453823">0</span>
+              <span class="stat-label">Empresas Registradas</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-check-circle"></i></div>
+            <div class="stat-content">
+              <span class="stat-number" data-count="127500">0</span>
+              <span class="stat-label">Empresas Verificadas</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-th-large"></i></div>
+            <div class="stat-content">
+              <span class="stat-number" data-count="250">0</span>
+              <span class="stat-label">Categorias</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon"><i class="fas fa-map-marked-alt"></i></div>
+            <div class="stat-content">
+              <span class="stat-number" data-count="16">0</span>
+              <span class="stat-label">Alcaldias</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <div class="scroll-indicator">
+        <a href="#categorias" aria-label="Scroll hacia abajo">
+          <i class="fas fa-chevron-down"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="section categories-section" id="categorias">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Explora por Categoria</span>
+          <h2 class="section-title">Categorias Populares</h2>
+          <p class="section-subtitle">Encuentra exactamente lo que necesitas entre nuestras categorias mas buscadas</p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Category Card 1 -->
+          <a href="#" class="category-card" data-category="restaurantes">
+            <div class="category-icon">
+              <i class="fas fa-utensils"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Restaurantes y Comida</h3>
+              <span class="category-count">54,481 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 2 -->
+          <a href="#" class="category-card" data-category="salud">
+            <div class="category-icon">
+              <i class="fas fa-heartbeat"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Salud y Bienestar</h3>
+              <span class="category-count">22,599 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 3 -->
+          <a href="#" class="category-card" data-category="legal">
+            <div class="category-icon">
+              <i class="fas fa-gavel"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Servicios Legales</h3>
+              <span class="category-count">12,847 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 4 -->
+          <a href="#" class="category-card" data-category="automotriz">
+            <div class="category-icon">
+              <i class="fas fa-car"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Automotriz</h3>
+              <span class="category-count">18,932 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 5 -->
+          <a href="#" class="category-card" data-category="construccion">
+            <div class="category-icon">
+              <i class="fas fa-hard-hat"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Construccion</h3>
+              <span class="category-count">15,678 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 6 -->
+          <a href="#" class="category-card" data-category="tecnologia">
+            <div class="category-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Tecnologia</h3>
+              <span class="category-count">9,845 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 7 -->
+          <a href="#" class="category-card" data-category="educacion">
+            <div class="category-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Educacion</h3>
+              <span class="category-count">11,234 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 8 -->
+          <a href="#" class="category-card" data-category="belleza">
+            <div class="category-icon">
+              <i class="fas fa-spa"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Belleza y Estetica</h3>
+              <span class="category-count">21,456 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 9 -->
+          <a href="#" class="category-card" data-category="comercio">
+            <div class="category-icon">
+              <i class="fas fa-store"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Comercio</h3>
+              <span class="category-count">207,304 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 10 -->
+          <a href="#" class="category-card" data-category="financieros">
+            <div class="category-icon">
+              <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Servicios Financieros</h3>
+              <span class="category-count">8,765 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 11 -->
+          <a href="#" class="category-card" data-category="inmobiliarias">
+            <div class="category-icon">
+              <i class="fas fa-home"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Bienes Raices</h3>
+              <span class="category-count">7,892 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+
+          <!-- Category Card 12 -->
+          <a href="#" class="category-card" data-category="manufactura">
+            <div class="category-icon">
+              <i class="fas fa-industry"></i>
+            </div>
+            <div class="category-content">
+              <h3 class="category-title">Manufactura</h3>
+              <span class="category-count">33,457 empresas</span>
+            </div>
+            <div class="category-arrow">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+          </a>
+        </div>
+
+        <div class="section-footer">
+          <a href="#" class="btn btn-outline btn-lg">
+            <i class="fas fa-th"></i>
+            Ver todas las categorias
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alcaldias Section -->
+    <section class="section alcaldias-section" id="alcaldias">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Explora por Ubicacion</span>
+          <h2 class="section-title">Las 16 Alcaldias de CDMX</h2>
+          <p class="section-subtitle">Encuentra empresas cerca de ti en cualquier zona de la Ciudad de Mexico</p>
+        </div>
+
+        <div class="alcaldias-grid">
+          <!-- Alcaldia Cards -->
+          <a href="#" class="alcaldia-card" data-alcaldia="alvaro-obregon">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/alvaro-obregon.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Alvaro Obregon</h3>
+              <span class="alcaldia-count">28,456 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Santa Fe</span>
+                <span>San Angel</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="azcapotzalco">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/azcapotzalco.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Azcapotzalco</h3>
+              <span class="alcaldia-count">19,234 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Industrial</span>
+                <span>Comercial</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card featured" data-alcaldia="benito-juarez">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/benito-juarez.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Benito Juarez</h3>
+              <span class="alcaldia-count">35,678 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Del Valle</span>
+                <span>Narvarte</span>
+                <span>Napolis</span>
+              </div>
+            </div>
+            <div class="alcaldia-badge">Popular</div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="coyoacan">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/coyoacan.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Coyoacan</h3>
+              <span class="alcaldia-count">31,245 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Centro</span>
+                <span>CU</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="cuajimalpa">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/cuajimalpa.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Cuajimalpa</h3>
+              <span class="alcaldia-count">12,890 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Santa Fe</span>
+                <span>Bosques</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card featured" data-alcaldia="cuauhtemoc">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/cuauhtemoc.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Cuauhtemoc</h3>
+              <span class="alcaldia-count">52,341 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Centro</span>
+                <span>Roma</span>
+                <span>Condesa</span>
+              </div>
+            </div>
+            <div class="alcaldia-badge">Mas empresas</div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="gustavo-a-madero">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/gam.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Gustavo A. Madero</h3>
+              <span class="alcaldia-count">41,567 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Basilica</span>
+                <span>Lindavista</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="iztacalco">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/iztacalco.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Iztacalco</h3>
+              <span class="alcaldia-count">18,456 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Agricola Oriental</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="iztapalapa">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/iztapalapa.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Iztapalapa</h3>
+              <span class="alcaldia-count">48,923 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Central de Abasto</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="magdalena-contreras">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/magdalena-contreras.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Magdalena Contreras</h3>
+              <span class="alcaldia-count">8,234 empresas</span>
+              <div class="alcaldia-tags">
+                <span>San Jeronimo</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card featured" data-alcaldia="miguel-hidalgo">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/miguel-hidalgo.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Miguel Hidalgo</h3>
+              <span class="alcaldia-count">38,765 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Polanco</span>
+                <span>Reforma</span>
+                <span>Lomas</span>
+              </div>
+            </div>
+            <div class="alcaldia-badge">Corporativos</div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="milpa-alta">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/milpa-alta.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Milpa Alta</h3>
+              <span class="alcaldia-count">4,567 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Rural</span>
+                <span>Agricola</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="tlahuac">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/tlahuac.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Tlahuac</h3>
+              <span class="alcaldia-count">11,234 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Chinampas</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="tlalpan">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/tlalpan.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Tlalpan</h3>
+              <span class="alcaldia-count">27,890 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Pedregal</span>
+                <span>Coapa</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="venustiano-carranza">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/venustiano-carranza.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Venustiano Carranza</h3>
+              <span class="alcaldia-count">24,567 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Aeropuerto</span>
+                <span>Merced</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="alcaldia-card" data-alcaldia="xochimilco">
+            <div class="alcaldia-image" style="background-image: url('img/alcaldias/xochimilco.jpg')">
+              <div class="alcaldia-overlay"></div>
+            </div>
+            <div class="alcaldia-content">
+              <h3 class="alcaldia-name">Xochimilco</h3>
+              <span class="alcaldia-count">15,678 empresas</span>
+              <div class="alcaldia-tags">
+                <span>Trajineras</span>
+                <span>Centro</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Interactive Map -->
+        <div class="map-container">
+          <div class="map-header">
+            <h3><i class="fas fa-map"></i> Mapa Interactivo de CDMX</h3>
+            <p>Haz clic en cualquier alcaldia para explorar sus empresas</p>
+          </div>
+          <div class="map-wrapper" id="cdmx-map">
+            <!-- SVG Map will be inserted here via JS -->
+            <div class="map-placeholder">
+              <i class="fas fa-map-marked-alt"></i>
+              <p>Mapa interactivo de las 16 alcaldias</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Businesses Section -->
+    <section class="section featured-section" id="empresas-destacadas">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Empresas Destacadas</span>
+          <h2 class="section-title">Negocios Verificados en CDMX</h2>
+          <p class="section-subtitle">Descubre empresas de confianza con el sello de verificacion de Directorio CDMX</p>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filter-tabs">
+          <button class="filter-tab active" data-filter="all">Todos</button>
+          <button class="filter-tab" data-filter="restaurantes">Restaurantes</button>
+          <button class="filter-tab" data-filter="salud">Salud</button>
+          <button class="filter-tab" data-filter="legal">Legal</button>
+          <button class="filter-tab" data-filter="tecnologia">Tecnologia</button>
+          <button class="filter-tab" data-filter="automotriz">Automotriz</button>
+        </div>
+
+        <!-- Business Cards Grid -->
+        <div class="business-grid" id="business-grid">
+
+          <!-- Business Card 1 -->
+          <article class="business-card" data-category="restaurantes">
+            <div class="business-image">
+              <img src="img/businesses/restaurant-1.jpg" alt="La Casa de Toño" loading="lazy">
+              <div class="business-badges">
+                <span class="badge badge-verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                <span class="badge badge-featured"><i class="fas fa-star"></i> Destacado</span>
+              </div>
+              <button class="btn-favorite" aria-label="Agregar a favoritos">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="business-content">
+              <div class="business-category">
+                <i class="fas fa-utensils"></i> Restaurante Mexicano
+              </div>
+              <h3 class="business-name">La Casa de Tono</h3>
+              <div class="business-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-score">4.7</span>
+                <span class="rating-count">(2,345 resenas)</span>
+              </div>
+              <p class="business-description">Pozole, antojitos mexicanos y comida tradicional. El mejor sabor casero de la Ciudad de Mexico.</p>
+              <div class="business-meta">
+                <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Cuauhtemoc</span>
+                <span class="meta-item"><i class="fas fa-clock"></i> Abierto ahora</span>
+              </div>
+              <div class="business-tags">
+                <span>Comida Mexicana</span>
+                <span>Pozole</span>
+                <span>Familiar</span>
+              </div>
+            </div>
+            <div class="business-footer">
+              <a href="tel:+525512345678" class="btn btn-sm btn-outline">
+                <i class="fas fa-phone"></i> Llamar
+              </a>
+              <a href="#" class="btn btn-sm btn-primary">
+                <i class="fas fa-eye"></i> Ver perfil
+              </a>
+            </div>
+          </article>
+
+          <!-- Business Card 2 -->
+          <article class="business-card" data-category="salud">
+            <div class="business-image">
+              <img src="img/businesses/clinic-1.jpg" alt="Clinica Dental Sonrisas" loading="lazy">
+              <div class="business-badges">
+                <span class="badge badge-verified"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <button class="btn-favorite" aria-label="Agregar a favoritos">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="business-content">
+              <div class="business-category">
+                <i class="fas fa-tooth"></i> Clinica Dental
+              </div>
+              <h3 class="business-name">Clinica Dental Sonrisas</h3>
+              <div class="business-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="rating-score">4.9</span>
+                <span class="rating-count">(892 resenas)</span>
+              </div>
+              <p class="business-description">Odontologia general, estetica dental, implantes y ortodoncia. Tecnologia de vanguardia.</p>
+              <div class="business-meta">
+                <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Benito Juarez</span>
+                <span class="meta-item"><i class="fas fa-clock"></i> Cierra 8pm</span>
+              </div>
+              <div class="business-tags">
+                <span>Dentista</span>
+                <span>Implantes</span>
+                <span>Ortodoncia</span>
+              </div>
+            </div>
+            <div class="business-footer">
+              <a href="tel:+525512345678" class="btn btn-sm btn-outline">
+                <i class="fas fa-phone"></i> Llamar
+              </a>
+              <a href="#" class="btn btn-sm btn-primary">
+                <i class="fas fa-eye"></i> Ver perfil
+              </a>
+            </div>
+          </article>
+
+          <!-- Business Card 3 -->
+          <article class="business-card" data-category="legal">
+            <div class="business-image">
+              <img src="img/businesses/lawyer-1.jpg" alt="Despacho Juridico Martinez" loading="lazy">
+              <div class="business-badges">
+                <span class="badge badge-verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                <span class="badge badge-premium"><i class="fas fa-crown"></i> Premium</span>
+              </div>
+              <button class="btn-favorite" aria-label="Agregar a favoritos">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="business-content">
+              <div class="business-category">
+                <i class="fas fa-gavel"></i> Despacho de Abogados
+              </div>
+              <h3 class="business-name">Despacho Juridico Martinez & Asociados</h3>
+              <div class="business-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="far fa-star"></i>
+                </div>
+                <span class="rating-score">4.5</span>
+                <span class="rating-count">(156 resenas)</span>
+              </div>
+              <p class="business-description">Especialistas en derecho corporativo, laboral, familiar y mercantil. Mas de 20 anos de experiencia.</p>
+              <div class="business-meta">
+                <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Miguel Hidalgo</span>
+                <span class="meta-item"><i class="fas fa-clock"></i> Abierto ahora</span>
+              </div>
+              <div class="business-tags">
+                <span>Derecho Laboral</span>
+                <span>Corporativo</span>
+                <span>Familiar</span>
+              </div>
+            </div>
+            <div class="business-footer">
+              <a href="tel:+525512345678" class="btn btn-sm btn-outline">
+                <i class="fas fa-phone"></i> Llamar
+              </a>
+              <a href="#" class="btn btn-sm btn-primary">
+                <i class="fas fa-eye"></i> Ver perfil
+              </a>
+            </div>
+          </article>
+
+          <!-- Business Card 4 -->
+          <article class="business-card" data-category="tecnologia">
+            <div class="business-image">
+              <img src="img/businesses/tech-1.jpg" alt="TechSolutions MX" loading="lazy">
+              <div class="business-badges">
+                <span class="badge badge-verified"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <button class="btn-favorite" aria-label="Agregar a favoritos">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="business-content">
+              <div class="business-category">
+                <i class="fas fa-laptop-code"></i> Desarrollo de Software
+              </div>
+              <h3 class="business-name">TechSolutions MX</h3>
+              <div class="business-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="rating-score">5.0</span>
+                <span class="rating-count">(78 resenas)</span>
+              </div>
+              <p class="business-description">Desarrollo web, apps moviles, sistemas empresariales y consultoria tecnologica para tu negocio.</p>
+              <div class="business-meta">
+                <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Cuauhtemoc</span>
+                <span class="meta-item"><i class="fas fa-clock"></i> Abierto ahora</span>
+              </div>
+              <div class="business-tags">
+                <span>Desarrollo Web</span>
+                <span>Apps</span>
+                <span>Software</span>
+              </div>
+            </div>
+            <div class="business-footer">
+              <a href="tel:+525512345678" class="btn btn-sm btn-outline">
+                <i class="fas fa-phone"></i> Llamar
+              </a>
+              <a href="#" class="btn btn-sm btn-primary">
+                <i class="fas fa-eye"></i> Ver perfil
+              </a>
+            </div>
+          </article>
+
+          <!-- Business Card 5 -->
+          <article class="business-card" data-category="automotriz">
+            <div class="business-image">
+              <img src="img/businesses/auto-1.jpg" alt="Taller Mecanico Express" loading="lazy">
+              <div class="business-badges">
+                <span class="badge badge-verified"><i class="fas fa-check-circle"></i> Verificado</span>
+              </div>
+              <button class="btn-favorite" aria-label="Agregar a favoritos">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="business-content">
+              <div class="business-category">
+                <i class="fas fa-car"></i> Taller Mecanico
+              </div>
+              <h3 class="business-name">Taller Mecanico Express</h3>
+              <div class="business-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <span class="rating-score">4.6</span>
+                <span class="rating-count">(423 resenas)</span>
+              </div>
+              <p class="business-description">Servicio automotriz completo, afinaciones, frenos, suspensiones y diagnostico computarizado.</p>
+              <div class="business-meta">
+                <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Coyoacan</span>
+                <span class="meta-item"><i class="fas fa-clock"></i> Cierra 7pm</span>
+              </div>
+              <div class="business-tags">
+                <span>Mecanico</span>
+                <span>Afinacion</span>
+                <span>Frenos</span>
+              </div>
+            </div>
+            <div class="business-footer">
+              <a href="tel:+525512345678" class="btn btn-sm btn-outline">
+                <i class="fas fa-phone"></i> Llamar
+              </a>
+              <a href="#" class="btn btn-sm btn-primary">
+                <i class="fas fa-eye"></i> Ver perfil
+              </a>
+            </div>
+          </article>
+
+          <!-- Business Card 6 -->
+          <article class="business-card" data-category="restaurantes">
+            <div class="business-image">
+              <img src="img/businesses/restaurant-2.jpg" alt="Sushi Zen" loading="lazy">
+              <div class="business-badges">
+                <span class="badge badge-verified"><i class="fas fa-check-circle"></i> Verificado</span>
+                <span class="badge badge-new"><i class="fas fa-sparkles"></i> Nuevo</span>
+              </div>
+              <button class="btn-favorite" aria-label="Agregar a favoritos">
+                <i class="far fa-heart"></i>
+              </button>
+            </div>
+            <div class="business-content">
+              <div class="business-category">
+                <i class="fas fa-fish"></i> Restaurante Japones
+              </div>
+              <h3 class="business-name">Sushi Zen</h3>
+              <div class="business-rating">
+                <div class="stars">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <span class="rating-score">4.8</span>
+                <span class="rating-count">(567 resenas)</span>
+              </div>
+              <p class="business-description">Autentica cocina japonesa, sushi fresco, ramen y especialidades del chef. Ambiente elegante.</p>
+              <div class="business-meta">
+                <span class="meta-item"><i class="fas fa-map-marker-alt"></i> Polanco</span>
+                <span class="meta-item"><i class="fas fa-clock"></i> Abierto ahora</span>
+              </div>
+              <div class="business-tags">
+                <span>Sushi</span>
+                <span>Japones</span>
+                <span>Fine Dining</span>
+              </div>
+            </div>
+            <div class="business-footer">
+              <a href="tel:+525512345678" class="btn btn-sm btn-outline">
+                <i class="fas fa-phone"></i> Llamar
+              </a>
+              <a href="#" class="btn btn-sm btn-primary">
+                <i class="fas fa-eye"></i> Ver perfil
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Load More Button -->
+        <div class="section-footer">
+          <button class="btn btn-lg btn-primary" id="load-more">
+            <i class="fas fa-plus"></i> Cargar mas empresas
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="section why-section">
+      <div class="container">
+        <div class="why-grid">
+          <div class="why-content">
+            <span class="section-badge">Por que elegirnos</span>
+            <h2 class="section-title">El Directorio Empresarial mas Confiable de CDMX</h2>
+            <p class="section-subtitle">Conectamos empresas con clientes de manera segura, rapida y eficiente. Somos el puente entre tu negocio y millones de clientes potenciales.</p>
+
+            <div class="features-list">
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Empresas Verificadas</h4>
+                  <p>Todas las empresas pasan por un proceso de verificacion telefonica y de datos.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-sync-alt"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>Datos Actualizados</h4>
+                  <p>Actualizamos la informacion trimestralmente para garantizar precision.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-mobile-alt"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>100% Responsivo</h4>
+                  <p>Busca empresas desde cualquier dispositivo, en cualquier momento.</p>
+                </div>
+              </div>
+
+              <div class="feature-item">
+                <div class="feature-icon">
+                  <i class="fas fa-chart-line"></i>
+                </div>
+                <div class="feature-content">
+                  <h4>SEO Optimizado</h4>
+                  <p>Tu empresa aparecera en los primeros resultados de Google.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="#" class="btn btn-primary btn-lg">
+              <i class="fas fa-building"></i> Registra tu empresa gratis
+            </a>
+          </div>
+
+          <div class="why-image">
+            <div class="image-container">
+              <img src="img/cdmx-skyline.jpg" alt="Ciudad de Mexico skyline" loading="lazy">
+              <div class="floating-card card-stats">
+                <div class="card-icon"><i class="fas fa-users"></i></div>
+                <div class="card-content">
+                  <span class="card-number">2.5M+</span>
+                  <span class="card-label">Usuarios mensuales</span>
+                </div>
+              </div>
+              <div class="floating-card card-rating">
+                <div class="card-icon"><i class="fas fa-star"></i></div>
+                <div class="card-content">
+                  <span class="card-number">4.8/5</span>
+                  <span class="card-label">Calificacion promedio</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="cta-content">
+          <div class="cta-text">
+            <h2>Haz crecer tu negocio hoy</h2>
+            <p>Unete a mas de 100,000 empresas que ya confian en Directorio CDMX para conectar con nuevos clientes.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="#" class="btn btn-white btn-lg">
+              <i class="fas fa-building"></i> Registrar mi empresa
+            </a>
+            <a href="#" class="btn btn-outline-white btn-lg">
+              <i class="fas fa-info-circle"></i> Conocer planes
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section testimonials-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Testimonios</span>
+          <h2 class="section-title">Lo que dicen nuestros usuarios</h2>
+          <p class="section-subtitle">Empresas y clientes que confian en Directorio CDMX</p>
+        </div>
+
+        <div class="testimonials-slider" id="testimonials-slider">
+          <div class="testimonials-track">
+
+            <!-- Testimonial 1 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <blockquote>
+                  "Desde que registramos nuestra clinica en Directorio CDMX, hemos recibido mas de 200 nuevos pacientes. La inversion se pago en el primer mes."
+                </blockquote>
+              </div>
+              <div class="testimonial-author">
+                <img src="img/testimonials/user-1.jpg" alt="Dr. Carlos Mendez">
+                <div class="author-info">
+                  <h4>Dr. Carlos Mendez</h4>
+                  <span>Clinica Dental Sonrisas</span>
+                  <span class="author-location"><i class="fas fa-map-marker-alt"></i> Benito Juarez</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+                <blockquote>
+                  "Excelente directorio. Encontre un abogado especializado en derecho laboral en menos de 5 minutos. El proceso de busqueda es muy intuitivo."
+                </blockquote>
+              </div>
+              <div class="testimonial-author">
+                <img src="img/testimonials/user-2.jpg" alt="Maria Garcia">
+                <div class="author-info">
+                  <h4>Maria Garcia</h4>
+                  <span>Usuario</span>
+                  <span class="author-location"><i class="fas fa-map-marker-alt"></i> Coyoacan</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="testimonial-card">
+              <div class="testimonial-content">
+                <div class="testimonial-rating">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+                <blockquote>
+                  "Como dueno de un taller mecanico, el directorio me ha ayudado a posicionarme en Google. Ahora recibo llamadas de clientes que me encontraron aqui."
+                </blockquote>
+              </div>
+              <div class="testimonial-author">
+                <img src="img/testimonials/user-3.jpg" alt="Roberto Sanchez">
+                <div class="author-info">
+                  <h4>Roberto Sanchez</h4>
+                  <span>Taller Mecanico Express</span>
+                  <span class="author-location"><i class="fas fa-map-marker-alt"></i> Gustavo A. Madero</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="slider-controls">
+            <button class="slider-btn prev" aria-label="Anterior"><i class="fas fa-chevron-left"></i></button>
+            <div class="slider-dots"></div>
+            <button class="slider-btn next" aria-label="Siguiente"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section blog-section" id="blog">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-badge">Blog</span>
+          <h2 class="section-title">Noticias y Consejos para tu Negocio</h2>
+          <p class="section-subtitle">Mantente informado sobre el ecosistema empresarial de la Ciudad de Mexico</p>
+        </div>
+
+        <div class="blog-grid">
+
+          <!-- Blog Post 1 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="img/blog/post-1.jpg" alt="Como registrar tu empresa en CDMX" loading="lazy">
+              <span class="blog-category">Guias</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> 15 Dic 2025</span>
+                <span><i class="far fa-clock"></i> 5 min lectura</span>
+              </div>
+              <h3 class="blog-title">
+                <a href="#">Como registrar tu empresa en CDMX: Guia completa 2025</a>
+              </h3>
+              <p class="blog-excerpt">Todo lo que necesitas saber para formalizar tu negocio en la Ciudad de Mexico, desde tramites hasta costos...</p>
+              <a href="#" class="blog-link">
+                Leer mas <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Post 2 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="img/blog/post-2.jpg" alt="Las mejores zonas para emprender" loading="lazy">
+              <span class="blog-category">Emprendimiento</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> 12 Dic 2025</span>
+                <span><i class="far fa-clock"></i> 8 min lectura</span>
+              </div>
+              <h3 class="blog-title">
+                <a href="#">Las 5 mejores alcaldias para emprender en CDMX</a>
+              </h3>
+              <p class="blog-excerpt">Analisis de las zonas con mayor potencial para iniciar un negocio basado en datos economicos y de mercado...</p>
+              <a href="#" class="blog-link">
+                Leer mas <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Blog Post 3 -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="img/blog/post-3.jpg" alt="SEO Local para negocios" loading="lazy">
+              <span class="blog-category">Marketing</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span><i class="far fa-calendar"></i> 10 Dic 2025</span>
+                <span><i class="far fa-clock"></i> 6 min lectura</span>
+              </div>
+              <h3 class="blog-title">
+                <a href="#">SEO Local: Como aparecer en Google cuando buscan "cerca de mi"</a>
+              </h3>
+              <p class="blog-excerpt">Estrategias probadas para que tu negocio aparezca en las busquedas locales y atraiga mas clientes...</p>
+              <a href="#" class="blog-link">
+                Leer mas <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="section-footer">
+          <a href="#" class="btn btn-outline btn-lg">
+            <i class="fas fa-newspaper"></i> Ver todos los articulos
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="section newsletter-section">
+      <div class="container">
+        <div class="newsletter-content">
+          <div class="newsletter-text">
+            <h2><i class="fas fa-envelope"></i> Suscribete a nuestro newsletter</h2>
+            <p>Recibe las ultimas noticias, guias y oportunidades de negocio directamente en tu correo.</p>
+          </div>
+          <form class="newsletter-form" id="newsletter-form">
+            <div class="form-group">
+              <input type="email" placeholder="Tu correo electronico" required>
+              <button type="submit" class="btn btn-primary">
+                <span>Suscribirse</span>
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </div>
+            <p class="form-note">
+              <i class="fas fa-lock"></i> Tu informacion esta segura. No compartimos tu correo con terceros.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="section partners-section">
+      <div class="container">
+        <div class="section-header">
+          <h3>Empresas y organizaciones que confian en nosotros</h3>
+        </div>
+        <div class="partners-slider">
+          <div class="partners-track">
+            <div class="partner-logo"><img src="img/partners/partner-1.png" alt="Partner 1"></div>
+            <div class="partner-logo"><img src="img/partners/partner-2.png" alt="Partner 2"></div>
+            <div class="partner-logo"><img src="img/partners/partner-3.png" alt="Partner 3"></div>
+            <div class="partner-logo"><img src="img/partners/partner-4.png" alt="Partner 4"></div>
+            <div class="partner-logo"><img src="img/partners/partner-5.png" alt="Partner 5"></div>
+            <div class="partner-logo"><img src="img/partners/partner-6.png" alt="Partner 6"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacto">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Footer About -->
+          <div class="footer-col footer-about">
+            <a href="/" class="footer-logo">
+              <span class="logo-icon"><i class="fas fa-building"></i></span>
+              <span class="logo-text">Directorio<span class="logo-accent">CDMX</span></span>
+            </a>
+            <p>El directorio empresarial mas completo y confiable de la Ciudad de Mexico. Conectamos negocios con clientes desde 2025.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Footer Links - Categorias -->
+          <div class="footer-col">
+            <h4>Categorias Populares</h4>
+            <ul class="footer-links">
+              <li><a href="#">Restaurantes</a></li>
+              <li><a href="#">Salud y Clinicas</a></li>
+              <li><a href="#">Abogados</a></li>
+              <li><a href="#">Talleres Mecanicos</a></li>
+              <li><a href="#">Constructoras</a></li>
+              <li><a href="#">Tecnologia</a></li>
+              <li><a href="#">Belleza y Spa</a></li>
+              <li><a href="#">Ver todas</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Links - Alcaldias -->
+          <div class="footer-col">
+            <h4>Alcaldias</h4>
+            <ul class="footer-links footer-links-grid">
+              <li><a href="#">Cuauhtemoc</a></li>
+              <li><a href="#">Benito Juarez</a></li>
+              <li><a href="#">Miguel Hidalgo</a></li>
+              <li><a href="#">Coyoacan</a></li>
+              <li><a href="#">Alvaro Obregon</a></li>
+              <li><a href="#">Tlalpan</a></li>
+              <li><a href="#">Iztapalapa</a></li>
+              <li><a href="#">Ver todas</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Links - Empresa -->
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <ul class="footer-links">
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Carreras</a></li>
+              <li><a href="#">Prensa</a></li>
+              <li><a href="#">Ayuda / FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Links - Para Empresas -->
+          <div class="footer-col">
+            <h4>Para Empresas</h4>
+            <ul class="footer-links">
+              <li><a href="#">Registrar Empresa</a></li>
+              <li><a href="#">Planes y Precios</a></li>
+              <li><a href="#">Como Funciona</a></li>
+              <li><a href="#">Casos de Exito</a></li>
+              <li><a href="#">API para Desarrolladores</a></li>
+              <li><a href="#">Soporte</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 Directorio CDMX. Todos los derechos reservados.</p>
+          <ul class="footer-legal">
+            <li><a href="#">Terminos y Condiciones</a></li>
+            <li><a href="#">Politica de Privacidad</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-content">
+      <p><i class="fas fa-cookie-bite"></i> Utilizamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestra <a href="#">Politica de Cookies</a>.</p>
+      <div class="cookie-actions">
+        <button class="btn btn-sm btn-outline" id="cookie-settings">Configurar</button>
+        <button class="btn btn-sm btn-primary" id="cookie-accept">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
   <script src="js/app.js"></script>
-
 </body>
 
 </html>
