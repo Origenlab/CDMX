@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Categorias de Empresas en CDMX - Directorio CDMX</title>
+  <meta name="description" content="Explora todas las categorias de empresas y negocios en la Ciudad de Mexico. Restaurantes, salud, servicios legales, seguridad, tecnologia y mas.">
+  <meta name="keywords" content="categorias empresas CDMX, directorio negocios Mexico, empresas por categoria, servicios CDMX">
+  <meta name="author" content="Directorio CDMX">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://directorio-cdmx.com/categorias/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://directorio-cdmx.com/categorias/">
+  <meta property="og:title" content="Categorias de Empresas en CDMX - Directorio CDMX">
+  <meta property="og:description" content="Explora todas las categorias de empresas y negocios en la Ciudad de Mexico.">
+  <meta property="og:image" content="https://directorio-cdmx.com/img/og-categorias.jpg">
+  <meta property="og:locale" content="es_MX">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Categorias de Empresas en CDMX">
+  <meta name="twitter:description" content="Directorio de empresas por categoria en CDMX">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/icon.png">
+  <meta name="theme-color" content="#E91E63">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Categorias de Empresas en CDMX",
+    "description": "Directorio de empresas por categoria en la Ciudad de Mexico",
+    "url": "https://directorio-cdmx.com/categorias/",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Directorio CDMX",
+      "url": "https://directorio-cdmx.com/"
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://directorio-cdmx.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Categorias",
+          "item": "https://directorio-cdmx.com/categorias/"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <style>
+    /* Categories Grid Section */
+    .categories-section {
+      padding: var(--space-16) 0;
+      background: var(--white);
+    }
+
+    .categories-section .section-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .categories-section .section-header h2 {
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      margin-bottom: var(--space-3);
+      color: var(--text-primary);
+    }
+
+    .categories-section .section-header p {
+      font-size: var(--text-lg);
+      color: var(--text-secondary);
+    }
+
+    .categories-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-6);
+    }
+
+    .category-card-large {
+      background: var(--white);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      border: 1px solid var(--border-light);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-4);
+    }
+
+    .category-card-large:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .category-card-large .category-icon {
+      width: 80px;
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--primary-light);
+      color: var(--primary);
+      border-radius: var(--radius-xl);
+      font-size: var(--text-3xl);
+    }
+
+    .category-card-large h3 {
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .category-card-large p {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    .category-card-large .category-count {
+      font-size: var(--text-sm);
+      color: var(--primary);
+      font-weight: 600;
+    }
+
+    /* Featured Categories */
+    .featured-categories {
+      padding: var(--space-16) 0;
+      background: var(--bg-secondary);
+    }
+
+    .featured-categories .section-header {
+      text-align: center;
+      margin-bottom: var(--space-12);
+    }
+
+    .featured-categories .section-header h2 {
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      margin-bottom: var(--space-3);
+      color: var(--text-primary);
+    }
+
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+    }
+
+    .featured-category-card {
+      background: var(--white);
+      border-radius: var(--radius-2xl);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .featured-category-card:hover {
+      box-shadow: var(--shadow-xl);
+    }
+
+    .featured-category-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .featured-category-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+    }
+
+    .featured-category-image h3 {
+      position: absolute;
+      bottom: var(--space-5);
+      left: var(--space-5);
+      color: var(--white);
+      font-size: var(--text-xl);
+      font-weight: 700;
+    }
+
+    .featured-category-content {
+      padding: var(--space-5);
+    }
+
+    .featured-category-content p {
+      font-size: var(--text-sm);
+      color: var(--text-secondary);
+      margin-bottom: var(--space-4);
+      line-height: 1.6;
+    }
+
+    .featured-category-content .category-stats {
+      display: flex;
+      justify-content: space-between;
+      padding-top: var(--space-4);
+      border-top: 1px solid var(--border-light);
+    }
+
+    .featured-category-content .stat {
+      text-align: center;
+    }
+
+    .featured-category-content .stat strong {
+      display: block;
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .featured-category-content .stat span {
+      font-size: var(--text-xs);
+      color: var(--text-muted);
+    }
+
+    /* CTA Section */
+    .categories-cta {
+      padding: var(--space-16) 0;
+      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+      color: var(--white);
+      text-align: center;
+    }
+
+    .categories-cta h2 {
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      margin-bottom: var(--space-4);
+    }
+
+    .categories-cta p {
+      font-size: var(--text-lg);
+      opacity: 0.9;
+      margin-bottom: var(--space-8);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .categories-cta .btn {
+      padding: var(--space-4) var(--space-8);
+      font-size: var(--text-lg);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .categories-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .categories-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .featured-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .categories-search {
+        flex-direction: column;
+      }
+
+      .categories-search button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .categories-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-content">
+        <div class="top-bar-left">
+          <span><i class="fas fa-phone-alt"></i> +52 55 1234 5678</span>
+          <span><i class="fas fa-envelope"></i> contacto@directorio-cdmx.com</span>
+        </div>
+        <div class="top-bar-right">
+          <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" class="social-link" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="navbar">
+        <a href="/" class="logo">
+          <span class="logo-icon"><i class="fas fa-building"></i></span>
+          <span class="logo-text">Directorio<span class="logo-accent">CDMX</span></span>
+        </a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menu" aria-expanded="false">
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="nav-menu" id="nav-menu">
+          <li><a href="/" class="nav-link">Inicio</a></li>
+          <li class="dropdown">
+            <a href="/categorias/" class="nav-link dropdown-toggle active">Categorias <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu">
+              <li><a href="#"><i class="fas fa-utensils"></i> Restaurantes</a></li>
+              <li><a href="#"><i class="fas fa-heartbeat"></i> Salud</a></li>
+              <li><a href="#"><i class="fas fa-gavel"></i> Servicios Legales</a></li>
+              <li><a href="#"><i class="fas fa-car"></i> Automotriz</a></li>
+              <li><a href="#"><i class="fas fa-home"></i> Bienes Raices</a></li>
+              <li><a href="#"><i class="fas fa-laptop-code"></i> Tecnologia</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a href="/categorias/"><i class="fas fa-th"></i> Ver todas las categorias</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="/#alcaldias" class="nav-link dropdown-toggle">Alcaldias <i class="fas fa-chevron-down"></i></a>
+            <ul class="dropdown-menu dropdown-menu-grid">
+              <li><a href="#">Alvaro Obregon</a></li>
+              <li><a href="#">Azcapotzalco</a></li>
+              <li><a href="#">Benito Juarez</a></li>
+              <li><a href="#">Coyoacan</a></li>
+              <li><a href="#">Cuajimalpa</a></li>
+              <li><a href="/alcaldias/cuauhtemoc/">Cuauhtemoc</a></li>
+              <li><a href="#">Gustavo A. Madero</a></li>
+              <li><a href="#">Iztacalco</a></li>
+              <li><a href="#">Iztapalapa</a></li>
+              <li><a href="#">Magdalena Contreras</a></li>
+              <li><a href="#">Miguel Hidalgo</a></li>
+              <li><a href="#">Milpa Alta</a></li>
+              <li><a href="#">Tlahuac</a></li>
+              <li><a href="#">Tlalpan</a></li>
+              <li><a href="#">Venustiano Carranza</a></li>
+              <li><a href="#">Xochimilco</a></li>
+            </ul>
+          </li>
+          <li><a href="/#empresas-destacadas" class="nav-link">Destacados</a></li>
+          <li><a href="/#blog" class="nav-link">Blog</a></li>
+          <li><a href="/#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <a href="#" class="btn btn-outline btn-sm">Iniciar Sesion</a>
+          <a href="#" class="btn btn-primary btn-sm">Registrar Empresa</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main id="main-content">
+
+    <!-- Breadcrumb Section -->
+    <section class="breadcrumb-section">
+      <div class="container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item">
+              <a href="/" class="breadcrumb-link">
+                <i class="fas fa-home"></i>
+                <span>Inicio</span>
+              </a>
+            </li>
+            <li class="breadcrumb-separator">
+              <i class="fas fa-chevron-right"></i>
+            </li>
+            <li class="breadcrumb-item active">
+              <span class="breadcrumb-current">
+                <i class="fas fa-th-large"></i>
+                Categorias
+              </span>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Category Hero -->
+    <section class="category-hero">
+      <div class="container">
+        <div class="category-hero-grid">
+          <!-- Columna Izquierda -->
+          <div class="category-hero-left">
+            <span class="category-hero-badge">Directorio Empresarial</span>
+            <h1>Explora Todas las Categorias</h1>
+            <p class="category-hero-description">Encuentra empresas y servicios en mas de 20 categorias diferentes. Desde restaurantes hasta servicios profesionales, todo verificado en un solo lugar.</p>
+            <div class="category-stats">
+              <div class="category-stat">
+                <strong>453,823</strong>
+                <span>Empresas</span>
+              </div>
+              <div class="category-stat">
+                <strong>127,500</strong>
+                <span>Verificadas</span>
+              </div>
+              <div class="category-stat">
+                <strong>20+</strong>
+                <span>Categorias</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Columna Derecha -->
+          <div class="category-hero-right">
+            <div class="category-hero-card">
+              <h3>El Directorio mas Completo de CDMX</h3>
+              <p>Nuestro directorio empresarial cuenta con la base de datos mas extensa y actualizada de la Ciudad de Mexico. Cada categoria agrupa negocios verificados, con informacion de contacto actualizada, horarios, ubicaciones exactas y resenas de clientes reales. Ya sea que busques un restaurante, un abogado, un taller mecanico o servicios de salud, aqui encontraras opciones confiables en las 16 alcaldias.</p>
+            </div>
+            <div class="category-hero-card">
+              <h3>Busqueda Facil y Resultados Confiables</h3>
+              <p>Navega por categoria o utiliza nuestro buscador avanzado para encontrar exactamente lo que necesitas. Filtra por alcaldia, calificacion, horarios y tipo de servicio. Todas las empresas destacadas han pasado por un proceso de verificacion que garantiza la calidad de la informacion. Conecta con negocios locales, apoya a la economia de tu ciudad y encuentra servicios de confianza cerca de ti.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="featured-categories">
+      <div class="container">
+        <div class="section-header">
+          <h2>Categorias Destacadas</h2>
+          <p>Las categorias mas populares en nuestro directorio</p>
+        </div>
+
+        <div class="featured-grid">
+          <a href="seguridad-privada.html" class="featured-category-card">
+            <div class="featured-category-image" style="background-image: url('../img/seguridad-privada/seguridad-privada-guardias-cdmx.webp')">
+              <h3>Seguridad Privada</h3>
+            </div>
+            <div class="featured-category-content">
+              <p>Empresas de seguridad, guardias, escoltas, vigilancia, monitoreo CCTV y sistemas de alarmas para hogares y empresas.</p>
+              <div class="category-stats">
+                <div class="stat">
+                  <strong>3,245</strong>
+                  <span>Empresas</span>
+                </div>
+                <div class="stat">
+                  <strong>12,890</strong>
+                  <span>Resenas</span>
+                </div>
+                <div class="stat">
+                  <strong>4.7</strong>
+                  <span>Promedio</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="featured-category-card">
+            <div class="featured-category-image" style="background-image: url('../img/categorias/restaurantes.webp')">
+              <h3>Restaurantes</h3>
+            </div>
+            <div class="featured-category-content">
+              <p>Los mejores restaurantes de la Ciudad de Mexico. Cocina mexicana, internacional, cafeterias, bares y mas.</p>
+              <div class="category-stats">
+                <div class="stat">
+                  <strong>15,670</strong>
+                  <span>Empresas</span>
+                </div>
+                <div class="stat">
+                  <strong>89,450</strong>
+                  <span>Resenas</span>
+                </div>
+                <div class="stat">
+                  <strong>4.5</strong>
+                  <span>Promedio</span>
+                </div>
+              </div>
+            </div>
+          </a>
+
+          <a href="#" class="featured-category-card">
+            <div class="featured-category-image" style="background-image: url('../img/categorias/salud.webp')">
+              <h3>Salud y Clinicas</h3>
+            </div>
+            <div class="featured-category-content">
+              <p>Hospitales, clinicas, consultorios medicos, dentistas, laboratorios y servicios de salud en general.</p>
+              <div class="category-stats">
+                <div class="stat">
+                  <strong>8,920</strong>
+                  <span>Empresas</span>
+                </div>
+                <div class="stat">
+                  <strong>45,230</strong>
+                  <span>Resenas</span>
+                </div>
+                <div class="stat">
+                  <strong>4.6</strong>
+                  <span>Promedio</span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- All Categories -->
+    <section class="categories-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Todas las Categorias</h2>
+          <p>Explora el directorio completo de empresas por categoria</p>
+        </div>
+
+        <div class="categories-grid">
+          <!-- Seguridad Privada -->
+          <a href="seguridad-privada.html" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-shield-alt"></i></div>
+            <h3>Seguridad Privada</h3>
+            <p>Guardias, escoltas, vigilancia, CCTV y alarmas</p>
+            <span class="category-count">3,245 empresas</span>
+          </a>
+
+          <!-- Restaurantes -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-utensils"></i></div>
+            <h3>Restaurantes</h3>
+            <p>Comida mexicana, internacional, cafes y bares</p>
+            <span class="category-count">15,670 empresas</span>
+          </a>
+
+          <!-- Salud -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-heartbeat"></i></div>
+            <h3>Salud y Clinicas</h3>
+            <p>Hospitales, clinicas, dentistas y laboratorios</p>
+            <span class="category-count">8,920 empresas</span>
+          </a>
+
+          <!-- Servicios Legales -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-gavel"></i></div>
+            <h3>Servicios Legales</h3>
+            <p>Abogados, notarios y asesoria legal</p>
+            <span class="category-count">4,560 empresas</span>
+          </a>
+
+          <!-- Automotriz -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-car"></i></div>
+            <h3>Automotriz</h3>
+            <p>Talleres, refacciones, agencias y servicios</p>
+            <span class="category-count">7,890 empresas</span>
+          </a>
+
+          <!-- Bienes Raices -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-home"></i></div>
+            <h3>Bienes Raices</h3>
+            <p>Inmobiliarias, renta y venta de propiedades</p>
+            <span class="category-count">5,340 empresas</span>
+          </a>
+
+          <!-- Tecnologia -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3>Tecnologia</h3>
+            <p>Software, hardware, soporte tecnico y TI</p>
+            <span class="category-count">6,780 empresas</span>
+          </a>
+
+          <!-- Belleza -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-spa"></i></div>
+            <h3>Belleza y Spa</h3>
+            <p>Esteticas, spas, salones y tratamientos</p>
+            <span class="category-count">9,120 empresas</span>
+          </a>
+
+          <!-- Educacion -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>Educacion</h3>
+            <p>Escuelas, universidades, cursos y capacitacion</p>
+            <span class="category-count">3,890 empresas</span>
+          </a>
+
+          <!-- Construccion -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-hard-hat"></i></div>
+            <h3>Construccion</h3>
+            <p>Constructoras, arquitectos e ingenieros</p>
+            <span class="category-count">4,230 empresas</span>
+          </a>
+
+          <!-- Finanzas -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>Finanzas</h3>
+            <p>Bancos, aseguradoras, contadores y asesores</p>
+            <span class="category-count">5,670 empresas</span>
+          </a>
+
+          <!-- Transporte -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-truck"></i></div>
+            <h3>Transporte</h3>
+            <p>Mudanzas, paqueteria, logistica y fletes</p>
+            <span class="category-count">3,450 empresas</span>
+          </a>
+
+          <!-- Eventos -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-calendar-check"></i></div>
+            <h3>Eventos</h3>
+            <p>Organizadores, banquetes, salones y fiestas</p>
+            <span class="category-count">4,120 empresas</span>
+          </a>
+
+          <!-- Mascotas -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-paw"></i></div>
+            <h3>Mascotas</h3>
+            <p>Veterinarias, tiendas, esteticas y guarderia</p>
+            <span class="category-count">2,890 empresas</span>
+          </a>
+
+          <!-- Hogar -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-couch"></i></div>
+            <h3>Hogar</h3>
+            <p>Mueblerias, decoracion, limpieza y servicios</p>
+            <span class="category-count">6,340 empresas</span>
+          </a>
+
+          <!-- Deportes -->
+          <a href="#" class="category-card-large">
+            <div class="category-icon"><i class="fas fa-dumbbell"></i></div>
+            <h3>Deportes</h3>
+            <p>Gimnasios, tiendas deportivas y entrenadores</p>
+            <span class="category-count">3,560 empresas</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="categories-cta">
+      <div class="container">
+        <h2>¿No Encuentras tu Categoria?</h2>
+        <p>Si tu negocio pertenece a una categoria que no aparece en nuestro directorio, contactanos y la agregaremos.</p>
+        <a href="/#contacto" class="btn btn-primary">Contactar</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contacto">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+
+          <!-- Footer About -->
+          <div class="footer-col footer-about">
+            <a href="/" class="footer-logo">
+              <span class="logo-icon"><i class="fas fa-building"></i></span>
+              <span class="logo-text">Directorio<span class="logo-accent">CDMX</span></span>
+            </a>
+            <p>El directorio empresarial mas completo y confiable de la Ciudad de Mexico. Conectamos negocios con clientes desde 2025.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+              <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Footer Links - Categorias -->
+          <div class="footer-col">
+            <h4>Categorias Populares</h4>
+            <ul class="footer-links">
+              <li><a href="#">Restaurantes</a></li>
+              <li><a href="#">Salud y Clinicas</a></li>
+              <li><a href="#">Abogados</a></li>
+              <li><a href="#">Talleres Mecanicos</a></li>
+              <li><a href="seguridad-privada.html">Seguridad Privada</a></li>
+              <li><a href="#">Tecnologia</a></li>
+              <li><a href="#">Belleza y Spa</a></li>
+              <li><a href="/categorias/">Ver todas</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Links - Alcaldias -->
+          <div class="footer-col">
+            <h4>Alcaldias</h4>
+            <ul class="footer-links footer-links-grid">
+              <li><a href="/alcaldias/cuauhtemoc/">Cuauhtemoc</a></li>
+              <li><a href="#">Benito Juarez</a></li>
+              <li><a href="#">Miguel Hidalgo</a></li>
+              <li><a href="#">Coyoacan</a></li>
+              <li><a href="#">Alvaro Obregon</a></li>
+              <li><a href="#">Tlalpan</a></li>
+              <li><a href="#">Iztapalapa</a></li>
+              <li><a href="/#alcaldias">Ver todas</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Links - Empresa -->
+          <div class="footer-col">
+            <h4>Empresa</h4>
+            <ul class="footer-links">
+              <li><a href="#">Sobre Nosotros</a></li>
+              <li><a href="#">Contacto</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Carreras</a></li>
+              <li><a href="#">Prensa</a></li>
+              <li><a href="#">Ayuda / FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- Footer Links - Para Empresas -->
+          <div class="footer-col">
+            <h4>Para Empresas</h4>
+            <ul class="footer-links">
+              <li><a href="#">Registrar Empresa</a></li>
+              <li><a href="#">Planes y Precios</a></li>
+              <li><a href="#">Como Funciona</a></li>
+              <li><a href="#">Casos de Exito</a></li>
+              <li><a href="#">API para Desarrolladores</a></li>
+              <li><a href="#">Soporte</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-content">
+          <p>&copy; 2025 Directorio CDMX. Todos los derechos reservados.</p>
+          <ul class="footer-legal">
+            <li><a href="#">Terminos y Condiciones</a></li>
+            <li><a href="#">Politica de Privacidad</a></li>
+            <li><a href="#">Cookies</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-content">
+      <p><i class="fas fa-cookie-bite"></i> Utilizamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestra <a href="#">Politica de Cookies</a>.</p>
+      <div class="cookie-actions">
+        <button class="btn btn-sm btn-outline" id="cookie-settings">Configurar</button>
+        <button class="btn btn-sm btn-primary" id="cookie-accept">Aceptar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="../js/app.js"></script>
+</body>
+
+</html>

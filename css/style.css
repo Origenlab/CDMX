@@ -1278,15 +1278,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Business Card */
 .business-card {
+  display: flex;
+  flex-direction: column;
   background: var(--white);
   border-radius: var(--radius-xl);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
-  transition: all var(--transition-base);
+  transition: box-shadow var(--transition-base);
+  height: 100%;
 }
 
 .business-card:hover {
-  transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -1300,11 +1302,6 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-slow);
-}
-
-.business-card:hover .business-image img {
-  transform: scale(1.05);
 }
 
 .business-badges {
@@ -1376,6 +1373,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .business-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   padding: var(--space-5);
 }
 
@@ -1461,6 +1461,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);
+  margin-top: auto;
 }
 
 .business-tags span {
@@ -1476,10 +1477,13 @@ h1, h2, h3, h4, h5, h6 {
   gap: var(--space-3);
   padding: var(--space-4) var(--space-5);
   border-top: 1px solid var(--border-light);
+  margin-top: auto;
 }
 
 .business-footer .btn {
   flex: 1;
+  justify-content: center;
+  text-align: center;
 }
 
 @media (max-width: 1024px) {

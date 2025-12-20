@@ -89,6 +89,9 @@
 </head>
 
 <body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="container">
@@ -123,27 +126,37 @@
         <ul class="nav-menu" id="nav-menu">
           <li><a href="/" class="nav-link">Inicio</a></li>
           <li class="dropdown">
-            <a href="#" class="nav-link dropdown-toggle">Categorias <i class="fas fa-chevron-down"></i></a>
+            <a href="/#categorias" class="nav-link dropdown-toggle">Categorias <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu">
-              <li><a href="/categorias/seguridad-privada/"><i class="fas fa-shield-alt"></i> Seguridad Privada</a></li>
               <li><a href="#"><i class="fas fa-utensils"></i> Restaurantes</a></li>
               <li><a href="#"><i class="fas fa-heartbeat"></i> Salud</a></li>
               <li><a href="#"><i class="fas fa-gavel"></i> Servicios Legales</a></li>
               <li><a href="#"><i class="fas fa-car"></i> Automotriz</a></li>
+              <li><a href="#"><i class="fas fa-home"></i> Bienes Raices</a></li>
               <li><a href="#"><i class="fas fa-laptop-code"></i> Tecnologia</a></li>
+              <li class="dropdown-divider"></li>
+              <li><a href="/#categorias"><i class="fas fa-th"></i> Ver todas las categorias</a></li>
             </ul>
           </li>
           <li class="dropdown">
-            <a href="#" class="nav-link dropdown-toggle active">Alcaldias <i class="fas fa-chevron-down"></i></a>
+            <a href="/#alcaldias" class="nav-link dropdown-toggle active">Alcaldias <i class="fas fa-chevron-down"></i></a>
             <ul class="dropdown-menu dropdown-menu-grid">
-              <li><a href="/alcaldias/cuauhtemoc/" class="active">Cuauhtemoc</a></li>
-              <li><a href="#">Benito Juarez</a></li>
-              <li><a href="#">Miguel Hidalgo</a></li>
-              <li><a href="#">Coyoacan</a></li>
               <li><a href="#">Alvaro Obregon</a></li>
-              <li><a href="#">Tlalpan</a></li>
-              <li><a href="#">Iztapalapa</a></li>
+              <li><a href="#">Azcapotzalco</a></li>
+              <li><a href="#">Benito Juarez</a></li>
+              <li><a href="#">Coyoacan</a></li>
+              <li><a href="#">Cuajimalpa</a></li>
+              <li><a href="/alcaldias/cuauhtemoc/">Cuauhtemoc</a></li>
               <li><a href="#">Gustavo A. Madero</a></li>
+              <li><a href="#">Iztacalco</a></li>
+              <li><a href="#">Iztapalapa</a></li>
+              <li><a href="#">Magdalena Contreras</a></li>
+              <li><a href="#">Miguel Hidalgo</a></li>
+              <li><a href="#">Milpa Alta</a></li>
+              <li><a href="#">Tlahuac</a></li>
+              <li><a href="#">Tlalpan</a></li>
+              <li><a href="#">Venustiano Carranza</a></li>
+              <li><a href="#">Xochimilco</a></li>
             </ul>
           </li>
           <li><a href="/#empresas-destacadas" class="nav-link">Destacados</a></li>
@@ -745,69 +758,95 @@
   </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" id="contacto">
     <div class="footer-top">
       <div class="container">
         <div class="footer-grid">
+
+          <!-- Footer About -->
           <div class="footer-col footer-about">
             <a href="/" class="footer-logo">
               <span class="logo-icon"><i class="fas fa-building"></i></span>
               <span class="logo-text">Directorio<span class="logo-accent">CDMX</span></span>
             </a>
-            <p>El directorio empresarial mas completo y confiable de la Ciudad de Mexico.</p>
+            <p>El directorio empresarial mas completo y confiable de la Ciudad de Mexico. Conectamos negocios con clientes desde 2025.</p>
             <div class="footer-social">
               <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
               <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
               <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
               <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+              <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
             </div>
           </div>
+
+          <!-- Footer Links - Categorias -->
           <div class="footer-col">
-            <h4>Categorias</h4>
+            <h4>Categorias Populares</h4>
             <ul class="footer-links">
-              <li><a href="/categorias/seguridad-privada/">Seguridad Privada</a></li>
               <li><a href="#">Restaurantes</a></li>
-              <li><a href="#">Salud</a></li>
+              <li><a href="#">Salud y Clinicas</a></li>
               <li><a href="#">Abogados</a></li>
+              <li><a href="#">Talleres Mecanicos</a></li>
+              <li><a href="/categorias/seguridad-privada.html">Seguridad Privada</a></li>
               <li><a href="#">Tecnologia</a></li>
+              <li><a href="#">Belleza y Spa</a></li>
+              <li><a href="/#categorias">Ver todas</a></li>
             </ul>
           </div>
+
+          <!-- Footer Links - Alcaldias -->
           <div class="footer-col">
             <h4>Alcaldias</h4>
-            <ul class="footer-links">
+            <ul class="footer-links footer-links-grid">
               <li><a href="/alcaldias/cuauhtemoc/">Cuauhtemoc</a></li>
               <li><a href="#">Benito Juarez</a></li>
               <li><a href="#">Miguel Hidalgo</a></li>
               <li><a href="#">Coyoacan</a></li>
+              <li><a href="#">Alvaro Obregon</a></li>
+              <li><a href="#">Tlalpan</a></li>
+              <li><a href="#">Iztapalapa</a></li>
+              <li><a href="/#alcaldias">Ver todas</a></li>
             </ul>
           </div>
+
+          <!-- Footer Links - Empresa -->
           <div class="footer-col">
             <h4>Empresa</h4>
             <ul class="footer-links">
               <li><a href="#">Sobre Nosotros</a></li>
               <li><a href="#">Contacto</a></li>
               <li><a href="#">Blog</a></li>
-              <li><a href="#">Ayuda</a></li>
+              <li><a href="#">Carreras</a></li>
+              <li><a href="#">Prensa</a></li>
+              <li><a href="#">Ayuda / FAQ</a></li>
             </ul>
           </div>
+
+          <!-- Footer Links - Para Empresas -->
           <div class="footer-col">
             <h4>Para Empresas</h4>
             <ul class="footer-links">
               <li><a href="#">Registrar Empresa</a></li>
               <li><a href="#">Planes y Precios</a></li>
               <li><a href="#">Como Funciona</a></li>
+              <li><a href="#">Casos de Exito</a></li>
+              <li><a href="#">API para Desarrolladores</a></li>
+              <li><a href="#">Soporte</a></li>
             </ul>
           </div>
+
         </div>
       </div>
     </div>
+
+    <!-- Footer Bottom -->
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-content">
           <p>&copy; 2025 Directorio CDMX. Todos los derechos reservados.</p>
           <ul class="footer-legal">
-            <li><a href="#">Terminos</a></li>
-            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Terminos y Condiciones</a></li>
+            <li><a href="#">Politica de Privacidad</a></li>
             <li><a href="#">Cookies</a></li>
           </ul>
         </div>
@@ -815,10 +854,21 @@
     </div>
   </footer>
 
-  <!-- Back to Top -->
+  <!-- Back to Top Button -->
   <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
     <i class="fas fa-chevron-up"></i>
   </button>
+
+  <!-- Cookie Consent Banner -->
+  <div class="cookie-banner" id="cookie-banner">
+    <div class="cookie-content">
+      <p><i class="fas fa-cookie-bite"></i> Utilizamos cookies para mejorar tu experiencia. Al continuar navegando, aceptas nuestra <a href="#">Politica de Cookies</a>.</p>
+      <div class="cookie-actions">
+        <button class="btn btn-sm btn-outline" id="cookie-settings">Configurar</button>
+        <button class="btn btn-sm btn-primary" id="cookie-accept">Aceptar</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Scripts -->
   <script src="../../js/app.js"></script>
