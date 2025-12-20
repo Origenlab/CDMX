@@ -628,6 +628,100 @@ Cuando se agregue una nueva categoria, crear:
 
 ---
 
+## 8. SECCION DE CATALOGO/EQUIPOS (Solo Texto)
+
+Para empresas que ofrecen multiples productos o servicios (ej: renta de equipos), usar tags de texto en lugar de iconos.
+
+### Estructura HTML
+
+```html
+<section class="equipment-section">
+  <div class="container">
+    <div class="section-header">
+      <h2>Catalogo de Equipos</h2>
+      <p>Descripcion del catalogo</p>
+    </div>
+
+    <div class="equipment-category">
+      <h3>Nombre de Categoria</h3>
+      <div class="equipment-grid">
+        <div class="equipment-item">Item 1</div>
+        <div class="equipment-item">Item 2</div>
+        <div class="equipment-item">Item 3</div>
+        <!-- Agregar mas items segun necesidad -->
+      </div>
+    </div>
+  </div>
+</section>
+```
+
+### Estilos CSS Requeridos
+
+```css
+.equipment-section {
+  padding: var(--space-16) 0;
+  background: var(--bg-secondary);
+}
+
+.equipment-category {
+  margin-bottom: var(--space-10);
+}
+
+.equipment-category h3 {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  margin-bottom: var(--space-5);
+  color: #db2777; /* O color de la categoria */
+}
+
+.equipment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.equipment-item {
+  background: var(--white);
+  border-radius: var(--radius-full);
+  padding: var(--space-2) var(--space-4);
+  text-align: center;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.equipment-item:hover {
+  border-color: #db2777;
+  background: #fdf2f8;
+  color: #db2777;
+}
+```
+
+### Ejemplo de Uso (EVENTECH)
+
+```html
+<div class="equipment-category">
+  <h3>Iluminacion Profesional</h3>
+  <div class="equipment-grid">
+    <div class="equipment-item">Guirnaldas</div>
+    <div class="equipment-item">Cascadas</div>
+    <div class="equipment-item">Luz Seguidora</div>
+    <div class="equipment-item">Iluminacion Ambiental</div>
+    <div class="equipment-item">Arquitectonica</div>
+    <div class="equipment-item">Neon</div>
+    <div class="equipment-item">Proyector Gobos</div>
+    <div class="equipment-item">Laser</div>
+    <div class="equipment-item">Sky Tracker</div>
+  </div>
+</div>
+```
+
+**IMPORTANTE:** NO usar iconos en los items de equipos/catalogo. Solo texto plano para mejor legibilidad y consistencia.
+
+---
+
 *Documento creado: Diciembre 2025*
 *Ultima actualizacion: Diciembre 2025*
-*Version: 1.0*
+*Version: 1.1*
