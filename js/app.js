@@ -18,9 +18,6 @@
     searchQuery: document.getElementById('search-query'),
     searchLocation: document.getElementById('search-location'),
     backToTop: document.getElementById('back-to-top'),
-    cookieBanner: document.getElementById('cookie-banner'),
-    cookieAccept: document.getElementById('cookie-accept'),
-    cookieSettings: document.getElementById('cookie-settings'),
     filterTabs: document.querySelectorAll('.filter-tab'),
     businessGrid: document.getElementById('business-grid'),
     loadMoreBtn: document.getElementById('load-more'),
@@ -272,21 +269,6 @@
     // Format number with commas
     formatNumber(num) {
       return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-    },
-
-    // Get cookie
-    getCookie(name) {
-      const value = `; ${document.cookie}`;
-      const parts = value.split(`; ${name}=`);
-      if (parts.length === 2) return parts.pop().split(';').shift();
-      return null;
-    },
-
-    // Set cookie
-    setCookie(name, value, days) {
-      const date = new Date();
-      date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-      document.cookie = `${name}=${value};expires=${date.toUTCString()};path=/`;
     },
 
     // Generate star rating HTML
@@ -683,32 +665,6 @@
   };
 
   // ============================================
-  // COOKIE BANNER
-  // ============================================
-  const cookieBanner = {
-    init() {
-      if (!DOM.cookieBanner) return;
-
-      if (!utils.getCookie('cookies_accepted')) {
-        DOM.cookieBanner.classList.add('visible');
-      }
-
-      if (DOM.cookieAccept) {
-        DOM.cookieAccept.addEventListener('click', () => {
-          utils.setCookie('cookies_accepted', 'true', 365);
-          DOM.cookieBanner.classList.remove('visible');
-        });
-      }
-
-      if (DOM.cookieSettings) {
-        DOM.cookieSettings.addEventListener('click', () => {
-          console.log('Open cookie settings');
-        });
-      }
-    }
-  };
-
-  // ============================================
   // NEWSLETTER
   // ============================================
   const newsletter = {
@@ -821,7 +777,6 @@
     statsCounter.init();
     testimonialsSlider.init();
     backToTop.init();
-    cookieBanner.init();
     newsletter.init();
     smoothScroll.init();
     alcaldiaCards.init();

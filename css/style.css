@@ -2268,63 +2268,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
-   COOKIE BANNER
-   ============================================ */
-.cookie-banner {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: var(--white);
-  padding: var(--space-5);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
-  z-index: var(--z-fixed);
-  transform: translateY(100%);
-  transition: transform var(--transition-base);
-}
-
-.cookie-banner.visible {
-  transform: translateY(0);
-}
-
-.cookie-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-6);
-  max-width: var(--container-max);
-  margin: 0 auto;
-}
-
-.cookie-content p {
-  flex: 1;
-  font-size: var(--text-sm);
-  color: var(--text-secondary);
-}
-
-.cookie-content p i {
-  color: var(--primary);
-  margin-right: var(--space-2);
-}
-
-.cookie-content a {
-  color: var(--primary);
-  text-decoration: underline;
-}
-
-.cookie-actions {
-  display: flex;
-  gap: var(--space-3);
-}
-
-@media (max-width: 768px) {
-  .cookie-content {
-    flex-direction: column;
-    text-align: center;
-  }
-}
-
-/* ============================================
    LOADING STATES
    ============================================ */
 .skeleton {
@@ -2341,8 +2284,7 @@ h1, h2, h3, h4, h5, h6 {
   .cta-section,
   .newsletter-section,
   .partners-section,
-  .back-to-top,
-  .cookie-banner {
+  .back-to-top {
     display: none !important;
   }
 
