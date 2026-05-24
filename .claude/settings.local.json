@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(python3:*)",
+      "Bash(/usr/bin/python3 -m pip install:*)",
+      "Bash(for:*)",
+      "Bash(do /usr/bin/sips -s format webp \"$f\" --out \"$f%.png.webp\")",
+      "Bash(done)",
+      "WebFetch(domain:inflablesparafiestas.com.mx)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
