@@ -500,7 +500,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Poppins','Inter',sans-serif;font-weight:700;line-
   display:grid;
   grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);
   gap:clamp(2rem,5vw,5rem);
-  align-items:start;
+  align-items:center;
   max-width:1600px;
   margin:0 auto var(--space-16);
   position:relative;
