@@ -207,94 +207,35 @@
     <!-- Results Section -->
     <section class="section results-section" id="empresas">
       <div class="container">
+        <header class="section-header">
+          <div class="section-heading">
+            <span class="section-badge">Directorio Verificado</span>
+            <h2 class="section-title">Empresas de <span class="accent">Seguridad Privada</span> en CDMX</h2>
+            <p class="section-subtitle">Compara empresas con permiso SSC vigente, alta IMSS, RFC activo y resenas reales. Filtra por alcaldia, tipo de servicio o subcategoria para encontrar al proveedor correcto en minutos.</p>
+            <div class="section-divider"><span>5 empresas listadas · Actualizado semanalmente</span></div>
+          </div>
+        </header>
+
         <div class="results-layout">
-
-          <!-- Sidebar Filtros -->
-          <aside class="filters-sidebar">
-            <div class="sidebar-header">
-              <h3>Filtros</h3>
-              <button class="btn-clear-filters" type="button">Limpiar</button>
-            </div>
-
-            <div class="sidebar-block">
-              <label class="sidebar-label">Buscar empresa</label>
-              <div class="sidebar-search">
-                <input type="text" id="search-businesses" placeholder="Nombre o servicio...">
-                <i class="fas fa-search"></i>
-              </div>
-            </div>
-
-            <div class="sidebar-block">
-              <label class="sidebar-label" for="filter-alcaldia">Alcaldia</label>
-              <select id="filter-alcaldia" class="sidebar-select">
-                <option value="">Todas las alcaldias</option>
-                <option value="alvaro-obregon">Alvaro Obregon</option>
-                <option value="azcapotzalco">Azcapotzalco</option>
-                <option value="benito-juarez">Benito Juarez</option>
-                <option value="coyoacan">Coyoacan</option>
-                <option value="cuajimalpa">Cuajimalpa</option>
-                <option value="cuauhtemoc">Cuauhtemoc</option>
-                <option value="gustavo-a-madero">Gustavo A. Madero</option>
-                <option value="iztacalco">Iztacalco</option>
-                <option value="iztapalapa">Iztapalapa</option>
-                <option value="magdalena-contreras">Magdalena Contreras</option>
-                <option value="miguel-hidalgo">Miguel Hidalgo</option>
-                <option value="milpa-alta">Milpa Alta</option>
-                <option value="tlahuac">Tlahuac</option>
-                <option value="tlalpan">Tlalpan</option>
-                <option value="venustiano-carranza">Venustiano Carranza</option>
-                <option value="xochimilco">Xochimilco</option>
-              </select>
-            </div>
-
-            <div class="sidebar-block">
-              <label class="sidebar-label" for="filter-service">Tipo de servicio</label>
-              <select id="filter-service" class="sidebar-select">
-                <option value="">Todos los servicios</option>
-                <option value="guardias">Guardias de Seguridad</option>
-                <option value="escoltas">Escoltas</option>
-                <option value="vigilancia">Vigilancia</option>
-                <option value="monitoreo">Monitoreo CCTV</option>
-                <option value="alarmas">Alarmas</option>
-                <option value="transporte">Transporte de Valores</option>
-                <option value="investigacion">Investigacion Privada</option>
-              </select>
-            </div>
-
-            <div class="sidebar-block">
-              <label class="sidebar-label" for="filter-sort">Ordenar por</label>
-              <select id="filter-sort" class="sidebar-select">
-                <option value="relevancia">Mas relevantes</option>
-                <option value="rating">Mejor calificados</option>
-                <option value="reviews">Mas resenas</option>
-                <option value="nombre">Nombre A-Z</option>
-              </select>
-            </div>
-
-            <div class="sidebar-block">
-              <span class="sidebar-label">Subcategorias</span>
-              <div class="sidebar-tags">
-                <a href="#" class="sidebar-tag active">Todos</a>
-                <a href="#" class="sidebar-tag">Guardias</a>
-                <a href="#" class="sidebar-tag">Escoltas</a>
-                <a href="#" class="sidebar-tag">Vigilancia 24/7</a>
-                <a href="#" class="sidebar-tag">CCTV</a>
-                <a href="#" class="sidebar-tag">Alarmas</a>
-                <a href="#" class="sidebar-tag">Valores</a>
-                <a href="#" class="sidebar-tag">Investigacion</a>
-                <a href="#" class="sidebar-tag">Electronica</a>
-                <a href="#" class="sidebar-tag">Corporativa</a>
-              </div>
-            </div>
-          </aside>
 
           <!-- Main: Listado -->
           <div class="results-main">
             <div class="results-header">
               <p class="results-count">Mostrando <strong>5</strong> de <strong>5</strong> empresas verificadas</p>
-              <div class="view-toggle" role="tablist" aria-label="Vista de resultados">
-                <button class="view-btn active" data-view="grid" aria-label="Vista cuadricula"><i class="fas fa-th"></i></button>
-                <button class="view-btn" data-view="list" aria-label="Vista lista"><i class="fas fa-list"></i></button>
+              <div class="results-header-right">
+                <div class="results-sort">
+                  <label for="filter-sort">Ordenar:</label>
+                  <select id="filter-sort">
+                    <option value="relevancia">Mas relevantes</option>
+                    <option value="rating">Mejor calificados</option>
+                    <option value="reviews">Mas resenas</option>
+                    <option value="nombre">Nombre A-Z</option>
+                  </select>
+                </div>
+                <div class="view-toggle" role="tablist" aria-label="Vista de resultados">
+                  <button class="view-btn active" data-view="grid" aria-label="Vista cuadricula"><i class="fas fa-th"></i></button>
+                  <button class="view-btn" data-view="list" aria-label="Vista lista"><i class="fas fa-list"></i></button>
+                </div>
               </div>
             </div>
 
@@ -481,6 +422,75 @@
 
             </div>
           </div>
+
+          <!-- Sidebar Filtros (derecha) -->
+          <aside class="filters-sidebar">
+            <div class="sidebar-header">
+              <h3>Filtros</h3>
+              <button class="btn-clear-filters" type="button">Limpiar</button>
+            </div>
+
+            <div class="sidebar-block">
+              <label class="sidebar-label" for="search-businesses">Buscar empresa</label>
+              <div class="sidebar-search">
+                <input type="text" id="search-businesses" placeholder="Nombre o servicio...">
+                <i class="fas fa-search"></i>
+              </div>
+            </div>
+
+            <div class="sidebar-block">
+              <label class="sidebar-label" for="filter-alcaldia">Alcaldia</label>
+              <select id="filter-alcaldia" class="sidebar-select">
+                <option value="">Todas las alcaldias</option>
+                <option value="alvaro-obregon">Alvaro Obregon</option>
+                <option value="azcapotzalco">Azcapotzalco</option>
+                <option value="benito-juarez">Benito Juarez</option>
+                <option value="coyoacan">Coyoacan</option>
+                <option value="cuajimalpa">Cuajimalpa</option>
+                <option value="cuauhtemoc">Cuauhtemoc</option>
+                <option value="gustavo-a-madero">Gustavo A. Madero</option>
+                <option value="iztacalco">Iztacalco</option>
+                <option value="iztapalapa">Iztapalapa</option>
+                <option value="magdalena-contreras">Magdalena Contreras</option>
+                <option value="miguel-hidalgo">Miguel Hidalgo</option>
+                <option value="milpa-alta">Milpa Alta</option>
+                <option value="tlahuac">Tlahuac</option>
+                <option value="tlalpan">Tlalpan</option>
+                <option value="venustiano-carranza">Venustiano Carranza</option>
+                <option value="xochimilco">Xochimilco</option>
+              </select>
+            </div>
+
+            <div class="sidebar-block">
+              <label class="sidebar-label" for="filter-service">Tipo de servicio</label>
+              <select id="filter-service" class="sidebar-select">
+                <option value="">Todos los servicios</option>
+                <option value="guardias">Guardias de Seguridad</option>
+                <option value="escoltas">Escoltas</option>
+                <option value="vigilancia">Vigilancia</option>
+                <option value="monitoreo">Monitoreo CCTV</option>
+                <option value="alarmas">Alarmas</option>
+                <option value="transporte">Transporte de Valores</option>
+                <option value="investigacion">Investigacion Privada</option>
+              </select>
+            </div>
+
+            <div class="sidebar-block">
+              <span class="sidebar-label">Subcategorias</span>
+              <div class="sidebar-tags">
+                <a href="#" class="sidebar-tag active">Todos</a>
+                <a href="#" class="sidebar-tag">Guardias</a>
+                <a href="#" class="sidebar-tag">Escoltas</a>
+                <a href="#" class="sidebar-tag">Vigilancia 24/7</a>
+                <a href="#" class="sidebar-tag">CCTV</a>
+                <a href="#" class="sidebar-tag">Alarmas</a>
+                <a href="#" class="sidebar-tag">Valores</a>
+                <a href="#" class="sidebar-tag">Investigacion</a>
+                <a href="#" class="sidebar-tag">Electronica</a>
+                <a href="#" class="sidebar-tag">Corporativa</a>
+              </div>
+            </div>
+          </aside>
 
         </div>
       </div>
