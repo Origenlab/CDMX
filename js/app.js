@@ -747,6 +747,42 @@
     }
   };
 
+  // ============================================
+  // CATEGORY CARD IMAGE -> CLICKABLE
+  // ============================================
+  const catCardImage = {
+    init() {
+      document.querySelectorAll('.cat-card').forEach(card => {
+        const img = card.querySelector('.cat-image');
+        if (!img) return;
+        // Prefer primary "Explorar" button, fallback to first link in cat-footer
+        const primary = card.querySelector('.cat-footer .btn-primary')
+                      || card.querySelector('.cat-footer a');
+        if (!primary) return;
+        const href = primary.getAttribute('href');
+        if (!href) return;
+
+        img.style.cursor = 'pointer';
+        img.setAttribute('role', 'link');
+        img.setAttribute('tabindex', '0');
+        img.setAttribute('aria-label', 'Ir a ' + (card.querySelector('.cat-name')?.textContent || 'la categoria'));
+
+        const go = (e) => {
+          // Don't hijack clicks on badges/links inside the image area
+          if (e.target.closest('a')) return;
+          window.location.href = href;
+        };
+        img.addEventListener('click', go);
+        img.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            window.location.href = href;
+          }
+        });
+      });
+    }
+  };
+
   // Add CSS for slider dots
   const style = document.createElement('style');
   style.textContent = `
@@ -780,6 +816,7 @@
     newsletter.init();
     smoothScroll.init();
     alcaldiaCards.init();
+    catCardImage.init();
 
     console.log('Directorio CDMX initialized (no animations)');
   }

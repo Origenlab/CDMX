@@ -1,0 +1,28 @@
+# Cloudflare Pages — 301 redirects de URLs viejas .html hacia URLs limpias
+# Mantiene SEO y compatibilidad con enlaces externos / indexacion previa
+
+# Categorias raiz
+/categorias/eventos.html              /categorias/eventos/              301
+/categorias/seguridad-privada.html    /categorias/seguridad-privada/    301
+
+# Blog
+/blog/elegir-empresa-seguridad-privada-cdmx.html  /blog/elegir-empresa-seguridad-privada-cdmx/  301
+/blog/guia-organizar-eventos-sociales-cdmx.html   /blog/guia-organizar-eventos-sociales-cdmx/   301
+/blog/mejores-barrios-cuauhtemoc-emprender.html   /blog/mejores-barrios-cuauhtemoc-emprender/   301
+
+# Alcaldia Cuauhtemoc — categorias
+/alcaldias/cuauhtemoc/categorias/eventos.html             /alcaldias/cuauhtemoc/categorias/eventos/             301
+/alcaldias/cuauhtemoc/categorias/seguridad-privada.html   /alcaldias/cuauhtemoc/categorias/seguridad-privada/   301
+
+# Dominio legacy directorio-cdmx.com (si Cloudflare Pages lo sirve, redirigir al canonical)
+https://directorio-cdmx.com/*  https://cdmx.site/:splat  301
+https://www.directorio-cdmx.com/*  https://cdmx.site/:splat  301
+
+# www -> apex
+https://www.cdmx.site/*  https://cdmx.site/:splat  301
+
+# Excepcion: 404.html debe mantenerse para que Cloudflare Pages la sirva como fallback
+/404.html  /404.html  200
+
+# Catch-all: cualquier .html residual -> URL limpia con slash final
+/*.html  /:splat/  301
