@@ -2605,28 +2605,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Poppins','Inter',sans-serif;font-weight:700;line-
 
 /* Category hero — variante editorial (2 parrafos marketing/SEO) */
 .category-hero-copy{
-  position:relative;
-  padding:var(--space-8) var(--space-8) var(--space-8) var(--space-10);
-  background:var(--grad-card),var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--r-xl);
-  overflow:hidden;
-  isolation:isolate;
-}
-.category-hero-copy::before{
-  content:"";
-  position:absolute;
-  top:var(--space-8);bottom:var(--space-8);
-  left:var(--space-5);width:3px;
-  background:var(--grad-primary);
-  border-radius:var(--r-full);
-}
-.category-hero-copy::after{
-  content:"";position:absolute;
-  inset:auto -25% -35% auto;
-  width:240px;height:240px;border-radius:50%;
-  background:radial-gradient(closest-side,rgba(212,175,55,.16),transparent 70%);
-  pointer-events:none;z-index:-1;
+  background:transparent;
+  border:0;
+  padding:0;
 }
 .category-hero-copy p{
   font-size:var(--text-base);
