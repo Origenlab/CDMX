@@ -2923,9 +2923,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Poppins','Inter',sans-serif;font-weight:700;line-
   background:radial-gradient(55% 55% at 50% 0%, rgba(212,175,55,.08), transparent 70%);
   pointer-events:none;
 }
-/* .related-grid: usa .cat-card de L1 — override solo el numero de columnas
-   ya que en L2 son 6 cards y queda mejor en 3 cols que en 4 (L1 fija 4) */
-.related-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+/* .related-grid: usa .cat-card de L1 — hereda grid 4-col de .categories-grid */
 
 /* --- Section title small (utility) --------------------------------------- */
 .section-title-sm{
