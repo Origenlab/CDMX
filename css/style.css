@@ -2923,59 +2923,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Poppins','Inter',sans-serif;font-weight:700;line-
   background:radial-gradient(55% 55% at 50% 0%, rgba(212,175,55,.08), transparent 70%);
   pointer-events:none;
 }
-.related-grid{
-  display:grid;
-  grid-template-columns:repeat(6,minmax(0,1fr));
-  gap:var(--space-4);
-}
-.related-card{
-  display:flex;flex-direction:column;align-items:center;
-  text-align:center;
-  padding:var(--space-6) var(--space-3);
-  background:var(--grad-card),var(--surface);
-  border:1px solid var(--border);
-  border-radius:var(--r-xl);
-  text-decoration:none;
-  color:var(--text);
-  transition:var(--t-base);
-  position:relative;
-  overflow:hidden;
-}
-.related-card::before{
-  content:"";position:absolute;inset:auto auto -50% 50%;
-  width:120px;height:120px;border-radius:50%;
-  background:radial-gradient(closest-side,rgba(212,175,55,.22),transparent 70%);
-  transform:translateX(-50%);
-  opacity:0;transition:var(--t-base);
-}
-.related-card:hover::before{opacity:1}
-.related-card i{
-  width:48px;height:48px;
-  display:inline-flex;align-items:center;justify-content:center;
-  border-radius:var(--r-full);
-  background:var(--primary-soft);
-  color:var(--primary);
-  font-size:1.2rem;
-  margin-bottom:var(--space-3);
-  transition:var(--t-base);
-  position:relative;z-index:1;
-}
-.related-card:hover i{
-  background:var(--grad-primary);
-  color:#fff;
-}
-.related-card span{
-  font-family:Poppins,Inter,sans-serif;
-  font-weight:700;
-  font-size:var(--text-sm);
-  margin-bottom:.25rem;
-  position:relative;z-index:1;
-}
-.related-card small{
-  font-size:var(--text-xs);
-  color:var(--text-muted);
-  position:relative;z-index:1;
-}
+/* .related-grid: usa .cat-card de L1 — override solo el numero de columnas
+   ya que en L2 son 6 cards y queda mejor en 3 cols que en 4 (L1 fija 4) */
+.related-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 
 /* --- Section title small (utility) --------------------------------------- */
 .section-title-sm{
@@ -2998,13 +2948,13 @@ h1,h2,h3,h4,h5,h6{font-family:'Poppins','Inter',sans-serif;font-weight:700;line-
   .results-main{order:1}
   .results-header{padding:var(--space-3) var(--space-4)}
   .results-header-right{flex-wrap:wrap;gap:var(--space-2)}
-  .related-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .related-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:640px){
   .category-hero{padding-block:var(--space-10) var(--space-8)}
   .category-hero-title{font-size:var(--text-4xl)}
   .category-stat-row{grid-template-columns:repeat(3,1fr);gap:var(--space-2)}
   .category-stat strong{font-size:var(--text-2xl)}
-  .related-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .related-grid{grid-template-columns:1fr}
   .breadcrumb-link span:not(:only-child){display:none}
 }
