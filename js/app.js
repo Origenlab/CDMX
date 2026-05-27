@@ -338,12 +338,24 @@
 
       DOM.dropdowns.forEach(dropdown => {
         const toggle = dropdown.querySelector('.dropdown-toggle');
-        if (toggle && window.innerWidth <= 1024) {
-          toggle.addEventListener('click', (e) => {
-            e.preventDefault();
-            dropdown.classList.toggle('active');
-          });
-        }
+        if (!toggle) return;
+
+        toggle.addEventListener('click', (e) => {
+          if (window.innerWidth > 1024) return; // desktop: hover handles dropdown, click navigates
+
+          const href = toggle.getAttribute('href') || '';
+          const isHubLink = href.startsWith('/') && href !== '/#' && !href.startsWith('/#');
+          const isOpen = dropdown.classList.contains('active');
+
+          if (isHubLink && isOpen) {
+            // Dropdown already open + real URL → allow navigation
+            return;
+          }
+
+          // Otherwise: open dropdown (first tap or anchor-only toggle)
+          e.preventDefault();
+          dropdown.classList.toggle('active');
+        });
       });
     }
   };
