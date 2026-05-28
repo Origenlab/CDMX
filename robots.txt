@@ -1,8 +1,104 @@
+# robots.txt — Directorio CDMX (cdmx.site)
 # https://www.robotstxt.org/
+# Last updated: 2026-05-28
 
+# ============================================================================
+# Default rules · todos los bots
+# ============================================================================
 User-agent: *
 Allow: /
-Disallow: /index.html.backup
-Disallow: /*.backup
+Allow: /img/
+Allow: /css/
+Allow: /js/
 
+# Disallow archivos backup, drafts y temporales
+Disallow: /*.backup
+Disallow: /*.bak
+Disallow: /*.tmp
+Disallow: /*.draft
+Disallow: /index.html.backup
+
+# Disallow query strings de cache-busting o tracking interno (sin valor SEO)
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?v=
+
+# ============================================================================
+# Crawlers principales · acceso completo (search engines)
+# ============================================================================
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /img/
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# ============================================================================
+# Crawlers AI · permitido (consideramos exposicion editorial valiosa)
+# ============================================================================
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+# ============================================================================
+# Scrapers agresivos / SEO crawlers · throttled
+# ============================================================================
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# ============================================================================
+# Bloqueados · scrapers comerciales sin valor SEO
+# ============================================================================
+User-agent: PetalBot
+Disallow: /
+
+User-agent: SeznamBot
+Disallow: /
+
+# ============================================================================
+# Sitemap · referencia obligatoria para crawl efficiency
+# ============================================================================
 Sitemap: https://cdmx.site/sitemap.xml
+
+# ============================================================================
+# Host · senal de canonical para search engines
+# ============================================================================
+Host: cdmx.site

@@ -1,0 +1,796 @@
+/* ==========================================================================
+   mobile.css — Mobile-first overhaul para Directorio CDMX
+   Carga DESPUES de style.css. Usa !important quirurgico para vencer la cascada
+   en componentes con alta especificidad (hero variants scoped, layout-shell).
+   Breakpoints: 1024 / 768 / 640 / 480 / 380
+   ========================================================================== */
+
+/* 1. TOKENS RESPONSIVE -------------------------------------------------- */
+@media (max-width:1024px){
+  :root{
+    --header-h:72px;
+    --container-px:1.25rem;
+    --section-py:4rem;
+  }
+}
+@media (max-width:768px){
+  :root{
+    --container-px:1rem;
+    --section-py:3.25rem;
+  }
+}
+@media (max-width:640px){
+  :root{
+    --header-h:64px;
+    --container-px:1rem;
+    --section-py:2.75rem;
+  }
+}
+@media (max-width:480px){
+  :root{
+    --container-px:.875rem;
+    --section-py:2.25rem;
+  }
+}
+@media (max-width:380px){
+  :root{
+    --header-h:60px;
+    --container-px:.75rem;
+    --section-py:2rem;
+  }
+}
+
+/* 2. CONTAINER FLUIDO + SAFE-AREA iOS ---------------------------------- */
+@media (max-width:1024px){
+  .container,
+  .container-wide{
+    padding-left:var(--container-px,1.25rem) !important;
+    padding-right:var(--container-px,1.25rem) !important;
+    max-width:100%;
+  }
+}
+@supports (padding: max(0px)){
+  @media (max-width:1024px){
+    .container,
+    .container-wide{
+      padding-left:max(var(--container-px,1.25rem),env(safe-area-inset-left)) !important;
+      padding-right:max(var(--container-px,1.25rem),env(safe-area-inset-right)) !important;
+    }
+  }
+}
+
+/* 3. SECTION PADDING TOKENIZADO ---------------------------------------- */
+@media (max-width:1024px){
+  .section,
+  section.section{
+    padding-top:var(--section-py,4rem) !important;
+    padding-bottom:var(--section-py,4rem) !important;
+  }
+}
+
+/* 4. TOP-BAR (oculta info larga en 640) -------------------------------- */
+@media (max-width:768px){
+  .top-bar-content{font-size:.75rem}
+  .top-bar-left{flex-wrap:wrap;gap:.5rem 1rem}
+  .top-bar-left span:nth-child(2){display:none}
+}
+@media (max-width:480px){
+  .top-bar{padding:.4rem 0}
+  .top-bar-right{display:none}
+}
+
+/* 5. HEADER + NAV-MENU stack ------------------------------------------- */
+@media (max-width:1024px){
+  .header{position:sticky;top:0;z-index:90}
+  .navbar{padding:.5rem 0;gap:.75rem}
+  .logo{font-size:1.125rem}
+  .nav-actions{display:none}
+  .mobile-menu-btn{
+    display:flex !important;
+    align-items:center;justify-content:center;
+    width:44px;height:44px;
+    background:transparent;border:1px solid var(--border-strong);
+    border-radius:.5rem;
+  }
+  .mobile-menu-btn .hamburger,
+  .mobile-menu-btn .hamburger::before,
+  .mobile-menu-btn .hamburger::after{
+    content:'';display:block;
+    width:20px;height:2px;background:var(--text);
+    transition:transform var(--t-base);
+  }
+  .mobile-menu-btn .hamburger::before{transform:translateY(-6px)}
+  .mobile-menu-btn .hamburger::after{transform:translateY(4px)}
+}
+
+/* nav-menu: panel deslizable */
+@media (max-width:1024px){
+  .nav-menu{
+    position:fixed !important;
+    top:var(--header-h,64px);
+    left:0;right:0;bottom:0;
+    flex-direction:column;
+    align-items:stretch;
+    background:var(--bg);
+    border-top:1px solid var(--border);
+    padding:1.25rem var(--container-px,1rem) 2rem;
+    overflow-y:auto;
+    transform:translateX(100%);
+    transition:transform var(--t-base);
+    gap:.25rem;
+    z-index:80;
+  }
+  .nav-menu.active{transform:translateX(0)}
+  .nav-menu > li{width:100%}
+  .nav-menu .nav-link{
+    display:flex;align-items:center;
+    min-height:48px;
+    padding:.75rem 0;
+    font-size:1rem;
+    border-bottom:1px solid var(--border);
+    width:100%;
+  }
+  .nav-menu .dropdown-menu{
+    position:static;display:none;
+    background:transparent;border:none;
+    padding:.5rem 0 1rem 1rem;
+    max-height:none;overflow:visible;
+    box-shadow:none;
+    width:100%;
+  }
+  .nav-menu .dropdown.active .dropdown-menu{display:flex !important;flex-direction:column}
+  .nav-menu .dropdown-menu li a{
+    min-height:44px;
+    padding:.5rem 0;
+    font-size:.95rem;
+    border-bottom:1px dotted var(--border);
+  }
+  .nav-menu .dropdown-menu-grid{
+    display:grid !important;
+    grid-template-columns:1fr 1fr;
+    gap:0 1rem;
+  }
+}
+
+/* 6. BREADCRUMB compacto ----------------------------------------------- */
+@media (max-width:640px){
+  .breadcrumb-section{padding:.75rem 0}
+  .breadcrumb-list{
+    flex-wrap:wrap;
+    gap:.25rem .5rem;
+    font-size:.75rem;
+  }
+  .breadcrumb-item:not(.active){display:none}
+  .breadcrumb-item:nth-last-child(1),
+  .breadcrumb-item:nth-last-child(3){display:flex}
+  .breadcrumb-separator{display:none}
+  .breadcrumb-current{font-size:.85rem;font-weight:600}
+  /* Mostrar "atras" indicator */
+  .breadcrumb-item:nth-last-child(3) .breadcrumb-link::before{
+    content:'\f060'; /* fa arrow-left */
+    font-family:'Font Awesome 6 Free';font-weight:900;
+    margin-right:.4rem;
+  }
+  .breadcrumb-item:nth-last-child(3) .breadcrumb-link span,
+  .breadcrumb-item:nth-last-child(3) .breadcrumb-link i:not(.fa-arrow-left){display:none}
+}
+
+/* 7. HERO — general (.hero) -------------------------------------------- */
+@media (max-width:1024px){
+  .hero,
+  section.hero{
+    min-height:auto !important;
+    padding-top:3rem !important;
+    padding-bottom:3rem !important;
+  }
+  .hero-title{font-size:clamp(1.875rem,5vw,2.75rem) !important;line-height:1.15;text-align:center}
+  .hero-subtitle{font-size:1rem !important;text-align:center;max-width:100%}
+  .hero-actions{
+    display:flex;flex-direction:column;
+    gap:.75rem;
+    align-items:stretch;
+    max-width:340px;margin:0 auto;
+  }
+  .hero-actions .btn{width:100%;justify-content:center;min-height:48px}
+  .hero-stats{
+    grid-template-columns:1fr 1fr !important;
+    gap:.75rem;
+  }
+  .hero-badge{font-size:.7rem;padding:.4rem .75rem;text-align:center}
+}
+@media (max-width:480px){
+  .hero-stats{
+    grid-template-columns:1fr 1fr !important;
+    gap:.5rem;
+  }
+  .stat-item{padding:.75rem;gap:.5rem}
+  .stat-icon{width:36px;height:36px;font-size:.95rem}
+  .stat-number{font-size:1.25rem}
+  .stat-label{font-size:.7rem}
+}
+
+/* 8. HERO PROFILE (L4) ------------------------------------------------- */
+@media (max-width:1024px){
+  .hero.hero-profile{padding:2.5rem 0 !important}
+  .hero-profile .hero-inner{
+    grid-template-columns:1fr !important;
+    gap:1.5rem;
+    text-align:center;
+  }
+  .hero-profile .hero-title,
+  .hero-profile .hero-main,
+  .hero-profile .hero-subtitle{text-align:center !important}
+  .hero-profile .hero-title{font-size:clamp(1.875rem,5vw,2.5rem) !important}
+  .hero-profile .hero-copy{
+    padding:1.25rem;
+    background:rgba(255,255,255,.03);
+    border:1px solid var(--border);
+    border-radius:1rem;
+  }
+  .hero-profile .hero-copy p{font-size:.9rem;line-height:1.65}
+  .hero-profile .hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+    max-width:340px;margin:0 auto;
+  }
+  .hero-profile .hero-actions .btn{width:100%}
+}
+
+/* 9. CATEGORY-HERO (L3) ------------------------------------------------ */
+@media (max-width:1024px){
+  .category-hero,
+  .cat-hub-hero,
+  .blog-hero{padding:3rem 0 !important;text-align:center}
+  .category-hero-inner,
+  .blog-hero-inner{
+    grid-template-columns:1fr !important;
+    gap:1.5rem;
+  }
+  .category-hero-aside,
+  .category-hero-copy{order:2}
+  .category-hero-title,
+  .blog-hero-title{font-size:clamp(2rem,6vw,3rem) !important;text-align:center}
+  .category-hero-subtitle{font-size:1rem;text-align:center}
+  .category-hero-actions{
+    flex-direction:column;
+    align-items:stretch;
+    max-width:340px;margin:1.5rem auto 0;
+    gap:.75rem;
+  }
+  .category-hero-actions .btn{width:100%;min-height:48px}
+  .category-hero-trust{justify-content:center;flex-wrap:wrap;gap:.5rem}
+  .category-hero-bullet{font-size:.75rem}
+}
+
+/* 10. CATEGORIES-GRID (4col → 2col → 1col) ----------------------------- */
+@media (max-width:1024px){
+  .categories-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:1rem;
+  }
+}
+@media (max-width:480px){
+  .categories-grid{
+    grid-template-columns:1fr !important;
+    gap:.875rem;
+  }
+}
+@media (max-width:1024px){
+  .cat-card{border-radius:14px}
+  .cat-image{aspect-ratio:16/10}
+  .cat-content{padding:1rem}
+  .cat-title{font-size:1rem}
+  .cat-desc{font-size:.85rem;line-height:1.5}
+}
+
+/* 11. BUSINESS-GRID (cards de empresas) -------------------------------- */
+@media (max-width:1024px){
+  .business-grid{
+    grid-template-columns:repeat(auto-fill,minmax(280px,1fr)) !important;
+    gap:1rem;
+  }
+}
+@media (max-width:640px){
+  .business-grid{
+    grid-template-columns:1fr !important;
+    gap:1rem;
+  }
+  .business-card{max-width:480px;margin:0 auto}
+  .business-image{aspect-ratio:16/10}
+  .business-content{padding:1rem}
+  .business-name{font-size:1.05rem}
+  .business-description{font-size:.85rem;line-height:1.55}
+  .business-footer{flex-direction:column;gap:.5rem}
+  .business-footer .btn{width:100%;justify-content:center;min-height:44px}
+  .business-badges{font-size:.65rem}
+}
+
+/* 12. BLOG-GRID ------------------------------------------------------- */
+@media (max-width:1024px){
+  .blog-grid{
+    grid-template-columns:repeat(2,1fr) !important;
+    gap:1.25rem;
+  }
+}
+@media (max-width:640px){
+  .blog-grid{
+    grid-template-columns:1fr !important;
+  }
+  .blog-card{max-width:480px;margin:0 auto}
+  .blog-content{padding:1rem}
+  .blog-title{font-size:1.05rem;line-height:1.3}
+  .blog-excerpt{font-size:.85rem}
+}
+
+/* 13. FEATURES-LIST grid (4col → 2col → 1col) -------------------------- */
+@media (max-width:1024px){
+  .features-list-4col,
+  .features-list-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:1rem;
+  }
+}
+@media (max-width:480px){
+  .features-list-4col,
+  .features-list-grid{
+    grid-template-columns:1fr !important;
+  }
+  .feature-item-vertical{padding:1rem}
+  .feature-item-vertical h4{font-size:1rem}
+  .feature-bullets{font-size:.85rem}
+  .feature-icon{font-size:1.5rem;width:48px;height:48px}
+}
+
+/* 14. STATS-GRID-L4 + DATOS-GRID --------------------------------------- */
+@media (max-width:1024px){
+  .stats-grid-l4{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:1rem}
+}
+@media (max-width:480px){
+  .stats-grid-l4{grid-template-columns:1fr !important}
+}
+@media (max-width:768px){
+  .datos-grid{gap:.5rem}
+  .datos-row{
+    grid-template-columns:1fr !important;
+    gap:.25rem;
+    padding:1rem;
+  }
+  .datos-key{
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    color:var(--text-muted);
+  }
+  .datos-val{font-size:.95rem;line-height:1.5}
+}
+
+/* 15. COVERAGE-BLOCKS (chips de zonas) --------------------------------- */
+@media (max-width:1024px){
+  .coverage-blocks{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:1rem;
+  }
+}
+@media (max-width:640px){
+  .coverage-blocks{
+    grid-template-columns:1fr !important;
+  }
+  .coverage-block-l4{padding:1rem}
+  .coverage-block-l4 h3{font-size:.95rem}
+  .coverage-chips-l4{gap:.4rem}
+  .coverage-chips-l4 span{font-size:.7rem;padding:.3rem .5rem}
+}
+
+/* 16. ABOUT-SECTION about-block (2col → 1col) -------------------------- */
+@media (max-width:1024px){
+  .about-prose{gap:1.5rem}
+  .about-block{
+    grid-template-columns:1fr !important;
+    gap:1rem;
+    padding:1.25rem;
+  }
+  .about-block-aside{
+    flex-direction:row;
+    align-items:center;
+    gap:.75rem;
+    padding-bottom:1rem;
+    border-bottom:1px solid var(--border);
+  }
+  .about-block-num{font-size:1.5rem}
+  .about-block-tag{font-size:.7rem}
+  .about-block-title{font-size:1.05rem;margin:0}
+  .about-block-body p{font-size:.9rem;line-height:1.65}
+  .about-block-body .about-lead{font-size:1rem}
+}
+@media (max-width:640px){
+  .about-block-aside{flex-direction:column;align-items:flex-start;text-align:left}
+  .about-cta{
+    flex-direction:column;
+    align-items:stretch;
+    gap:1.25rem;
+    padding:1.5rem 1rem;
+    text-align:center;
+  }
+  .about-cta-actions{
+    flex-direction:column;
+    gap:.75rem;
+  }
+  .about-cta-actions .btn{width:100%;justify-content:center;min-height:48px}
+}
+
+/* 17. LAYOUT-SHELL (sidebar + main, ya tiene mobile en style.css) ------ */
+@media (max-width:1024px){
+  .layout-shell{margin-top:1.5rem !important;gap:1.5rem !important}
+  .layout-main .section{padding:2rem 0 !important}
+  .layout-main .section-title{font-size:clamp(1.5rem,4vw,2rem) !important}
+  .layout-sidebar{padding:1.5rem 0 !important}
+  .sidebar-module{
+    padding:1rem !important;
+    border-radius:14px;
+  }
+  .sidebar-cta-btn{min-height:48px}
+  .sidebar-cta-meta li{font-size:.8rem;padding:.5rem}
+  .sidebar-link-list li a{min-height:44px}
+}
+@media (max-width:640px){
+  .sidebar-cta-meta{grid-template-columns:1fr 1fr !important;gap:.5rem}
+  .sidebar-toc-list{grid-template-columns:1fr !important}
+  .sidebar-toc-list li a{min-height:44px;font-size:.95rem}
+}
+
+/* 18. SECTION HEADER (1col stack) -------------------------------------- */
+@media (max-width:1024px){
+  .section-header{
+    grid-template-columns:1fr !important;
+    gap:1rem !important;
+    text-align:left;
+  }
+  .section-header-centered{text-align:center}
+  .section-title{font-size:clamp(1.75rem,4.5vw,2.5rem) !important;line-height:1.2}
+  .section-subtitle{font-size:1rem;line-height:1.55}
+  .section-badge{font-size:.7rem;padding:.35rem .75rem}
+  .section-divider{font-size:.7rem}
+}
+
+/* 19. TESTIMONIALS slider (3col → 2col → 1col stack) ------------------- */
+@media (max-width:1024px){
+  .testimonials-track{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:1rem;
+  }
+}
+@media (max-width:640px){
+  .testimonials-track{
+    grid-template-columns:1fr !important;
+  }
+  .testimonial-card{padding:1.25rem}
+  .testimonial-card blockquote{font-size:.95rem;line-height:1.6}
+  .testimonial-author h4{font-size:.95rem}
+  .testimonial-author span{font-size:.75rem}
+  .author-avatar{width:42px;height:42px;font-size:.875rem}
+}
+
+/* 20. FAQ (collapsed grid + form) -------------------------------------- */
+@media (max-width:1024px){
+  .faq-layout{
+    grid-template-columns:1fr !important;
+    gap:1.5rem;
+  }
+  .faq-col-form{order:2}
+  .faq-col-questions{order:1}
+  .faq-item{padding:1rem;border-radius:12px}
+  .faq-item summary{font-size:.95rem;line-height:1.4;gap:.75rem}
+  .faq-item summary span{flex:1;min-width:0}
+  .faq-item p{font-size:.875rem;line-height:1.65;padding-top:.5rem}
+  .faq-toggle{font-size:.85rem;flex-shrink:0}
+}
+
+/* 21. FORMS — iOS no-zoom + touch targets ------------------------------ */
+@media (max-width:640px){
+  .form-grid{
+    grid-template-columns:1fr !important;
+    gap:.75rem;
+  }
+  .form-field-full,
+  .form-field{grid-column:1 !important}
+  .form-field label{font-size:.875rem;margin-bottom:.4rem}
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea,
+  .newsletter-form input,
+  .form-field input,
+  .form-field select,
+  .form-field textarea{
+    font-size:16px !important; /* iOS no-zoom */
+    min-height:48px;
+    padding:.75rem 1rem !important;
+    border-radius:.5rem !important;
+  }
+  .form-field textarea,
+  .contact-form textarea{min-height:96px;padding-top:.75rem !important}
+  .form-check{font-size:.85rem;line-height:1.45;gap:.5rem;align-items:flex-start}
+  .form-check input[type=checkbox]{width:20px;height:20px;flex-shrink:0;margin-top:.15rem}
+  .contact-form-title{font-size:1.25rem}
+  .contact-form-sub{font-size:.85rem;line-height:1.55}
+  .contact-form-submit{min-height:52px;font-size:1rem}
+  .contact-form-trust{flex-direction:column;gap:.5rem;font-size:.8rem;padding-left:0}
+  .contact-form-trust li{padding-left:1.5rem;position:relative;text-align:left}
+  .contact-form-alt{font-size:.85rem;text-align:center;margin-top:.75rem}
+}
+
+/* 22. CTA-SECTION (final) ---------------------------------------------- */
+@media (max-width:1024px){
+  .cta-section{padding:3rem 0 !important}
+  .cta-content{
+    flex-direction:column !important;
+    gap:1.5rem !important;
+    text-align:center;
+  }
+  .cta-text h2{font-size:clamp(1.5rem,4vw,2.25rem) !important;line-height:1.25}
+  .cta-text p{font-size:.95rem;line-height:1.6}
+  .cta-actions{
+    flex-direction:column !important;
+    gap:.75rem;
+    max-width:340px;margin:0 auto;
+    width:100%;
+  }
+  .cta-actions .btn{width:100%;justify-content:center;min-height:52px}
+}
+
+/* 23. NEWSLETTER + PARTNERS -------------------------------------------- */
+@media (max-width:768px){
+  .newsletter-section{padding:3rem 0}
+  .newsletter-content{
+    flex-direction:column !important;
+    align-items:stretch;
+    gap:1.5rem;
+    text-align:center;
+  }
+  .newsletter-text h2{font-size:1.5rem}
+  .newsletter-text p{font-size:.9rem}
+  .newsletter-form .form-group{
+    flex-direction:column;
+    gap:.5rem;
+  }
+  .newsletter-form input{width:100%;min-height:48px}
+  .newsletter-form .btn{width:100%;min-height:48px}
+  .partners-slider{overflow:hidden}
+  .partners-track{gap:1.5rem}
+  .partner-logo img{max-height:40px;width:auto}
+}
+
+/* 24. FOOTER (5col → 2col → 1col) -------------------------------------- */
+@media (max-width:1024px){
+  .footer-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:2rem;
+  }
+  .footer-col.footer-about{grid-column:1/-1}
+}
+@media (max-width:640px){
+  .footer-grid{
+    grid-template-columns:1fr !important;
+    gap:1.75rem;
+  }
+  .footer-col h4{font-size:1rem;margin-bottom:.75rem}
+  .footer-links a{
+    display:inline-block;
+    min-height:32px;
+    padding:.25rem 0;
+    font-size:.875rem;
+  }
+  .footer-links-grid{
+    display:grid !important;
+    grid-template-columns:1fr 1fr;
+    gap:.25rem .75rem;
+  }
+  .footer-social{justify-content:flex-start}
+  .footer-social a{
+    width:40px;height:40px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .footer-bottom-content{
+    flex-direction:column;
+    gap:1rem;
+    text-align:center;
+  }
+  .footer-legal{justify-content:center;flex-wrap:wrap;gap:.5rem 1rem}
+}
+
+/* 25. RELATED-SECTION / L2-RELATED-BLOG (heredan business-grid/blog-grid) */
+@media (max-width:1024px){
+  .related-section,
+  .l2-related-blog{padding:3rem 0 !important}
+}
+
+/* 26. GALLERY 2x2 (L4) ------------------------------------------------- */
+@media (max-width:768px){
+  .gallery-section .gallery-grid,
+  .gallery-grid{
+    grid-template-columns:1fr 1fr !important;
+    gap:.75rem !important;
+  }
+  .gallery-grid figure{border-radius:10px !important;aspect-ratio:1/1 !important}
+}
+@media (max-width:380px){
+  .gallery-grid{grid-template-columns:1fr !important}
+}
+
+/* 27. BUTTONS GLOBALES ------------------------------------------------- */
+@media (max-width:1024px){
+  .btn{
+    min-height:44px;
+    font-size:.95rem;
+    padding:.65rem 1.25rem;
+    transition:transform .15s ease,background-color .2s ease;
+  }
+  .btn-lg{
+    min-height:52px;
+    font-size:1rem;
+    padding:.85rem 1.5rem;
+  }
+  .btn-sm{
+    min-height:38px;
+    font-size:.825rem;
+    padding:.45rem .85rem;
+  }
+}
+
+/* 28. BACK-TO-TOP FAB (reposicion mobile) ------------------------------ */
+@media (max-width:640px){
+  .back-to-top{
+    width:48px !important;
+    height:48px !important;
+    right:1rem !important;
+    bottom:1rem !important;
+    font-size:1.05rem;
+  }
+}
+@supports (padding: max(0px)){
+  @media (max-width:640px){
+    .back-to-top{
+      right:max(1rem,env(safe-area-inset-right)) !important;
+      bottom:max(1rem,env(safe-area-inset-bottom)) !important;
+    }
+  }
+}
+
+/* 29. CAT-CARD (categoria home grid) ----------------------------------- */
+@media (max-width:768px){
+  .cat-card .cat-header{padding:1rem 1rem .75rem;gap:.5rem}
+  .cat-card .cat-icon{width:36px;height:36px;font-size:.95rem}
+  .cat-card .cat-title{font-size:1rem}
+  .cat-card .cat-content{padding:.75rem 1rem 1rem}
+  .cat-card .cat-meta{font-size:.75rem}
+}
+
+/* 30. RESULTS-LAYOUT (L3 filtros + grid) ------------------------------- */
+@media (max-width:1024px){
+  .results-layout{
+    grid-template-columns:1fr !important;
+    gap:1.5rem !important;
+  }
+  .filters-sidebar{
+    position:static;
+    max-height:none;
+    overflow:visible;
+    padding:1.25rem;
+    order:1;
+  }
+  .results-main{order:2;min-width:0}
+  .results-header{
+    flex-direction:column;
+    align-items:stretch;
+    gap:.75rem;
+  }
+  .results-header-right{flex-wrap:wrap;gap:.5rem;justify-content:flex-start}
+}
+
+/* 31. ALCALDIAS GRID --------------------------------------------------- */
+@media (max-width:1024px){
+  .alcaldias-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    gap:.75rem;
+  }
+}
+@media (max-width:640px){
+  .alcaldias-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  }
+  .alcaldia-card{padding:1rem;border-radius:12px}
+  .alcaldia-card h3{font-size:.9rem}
+}
+@media (max-width:380px){
+  .alcaldias-grid{grid-template-columns:1fr !important}
+}
+
+/* 32. QUICK-STRIP GRID (home stats) ------------------------------------ */
+@media (max-width:1024px){
+  .quick-strip-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:.75rem;
+  }
+}
+@media (max-width:480px){
+  .quick-strip-grid{grid-template-columns:1fr !important}
+}
+
+/* 33. BLOG-FEATURED + BLOG-HERO --------------------------------------- */
+@media (max-width:1024px){
+  .blog-featured{
+    grid-template-columns:1fr !important;
+    gap:1.5rem;
+  }
+  .blog-featured-media{aspect-ratio:16/10}
+  .blog-featured-body h3{font-size:1.25rem;line-height:1.3}
+  .blog-featured-actions{flex-direction:column;gap:.5rem;align-items:stretch}
+  .blog-featured-actions .btn{width:100%}
+}
+
+/* 34. POST-HEADER (blog detalle) -------------------------------------- */
+@media (max-width:768px){
+  .post-header h1{font-size:clamp(1.5rem,5vw,2.25rem)}
+  .post-header .meta{flex-wrap:wrap;gap:.5rem .75rem;font-size:.8rem}
+}
+
+/* 35. TAP HIGHLIGHT + TOUCH SCROLL ------------------------------------- */
+@media (max-width:1024px){
+  a,button,.btn,
+  .nav-link,
+  .business-card a,
+  .blog-card a,
+  .cat-card,
+  .sidebar-link-list a{
+    -webkit-tap-highlight-color:rgba(233,30,99,.18);
+    touch-action:manipulation;
+  }
+  /* Smooth scrolling on iOS */
+  body{-webkit-overflow-scrolling:touch}
+  /* Disable hover transforms on touch devices (anti-stuck-hover) */
+  @media (hover:none){
+    .business-card:hover,
+    .blog-card:hover,
+    .cat-card:hover,
+    .alcaldia-card:hover,
+    .feature-item-vertical:hover{
+      transform:none !important;
+    }
+  }
+}
+
+/* 36. OVERFLOW PROTECTION (prevenir scroll horizontal) ----------------- */
+@media (max-width:1024px){
+  html,body{overflow-x:hidden;max-width:100vw}
+  .layout-main,
+  .layout-sidebar,
+  .container,
+  .container-wide{min-width:0;max-width:100%}
+  img,iframe,video{max-width:100%;height:auto}
+  pre,code{max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch}
+}
+
+/* 37. SECTIONS misc — pequenas correcciones ---------------------------- */
+@media (max-width:640px){
+  .breadcrumb-section{margin-bottom:0}
+  /* hero hijo overlay no debe interferir con stack */
+  .hero-bg,.hero-overlay,.hero-pattern{pointer-events:none}
+}
+
+/* 38. SKIP-LINK accesible --------------------------------------------- */
+.skip-link{
+  position:absolute;left:-9999px;top:0;
+  background:var(--primary);color:#fff;
+  padding:.75rem 1.25rem;border-radius:.5rem;
+  z-index:9999;font-weight:600;
+}
+.skip-link:focus{left:1rem;top:1rem}
+
+/* 39. NOTAS DE CASCADA ------------------------------------------------- */
+/*
+   El !important en este archivo es intencional: vence overrides de
+   reglas mas especificas (hero variants scoped, layout-shell con grid,
+   forms con padding hardcoded) sin tener que reescribir style.css.
+   Si necesitas un override aun mas fuerte, agrega ese selector aqui
+   con !important. No agregar !important en style.css; mantener limpia
+   la cascada base.
+*/
