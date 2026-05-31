@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Sensores de humo y calor CDMX">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="60%" stop-color="#2d0e0e"/>
+      <stop offset="100%" stop-color="#3b0a0a"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.55">
+      <stop offset="0%" stop-color="#ff3d00" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#ff3d00" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff6b35"/>
+      <stop offset="100%" stop-color="#e63946"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="400" cy="200" r="240" fill="url(#glow)"/>
+  <g transform="translate(360 130) scale(1.5)" fill="url(#accent)">
+    <circle cx="32" cy="50" r="30" fill="none" stroke="url(#accent)" stroke-width="6"/><circle cx="32" cy="50" r="14"/><circle cx="32" cy="50" r="6" fill="#1a1a2e"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" fill="#fff" font-family="Inter,system-ui,sans-serif" font-size="26" font-weight="700" letter-spacing="0.03em">DETECCION DE HUMO Y CALOR</text>
+  <text x="400" y="402" text-anchor="middle" fill="#a8acbf" font-family="Inter,system-ui,sans-serif" font-size="14" letter-spacing="0.18em">SENSORES · OPTICOS · TERMOVEL.</text>
+</svg>
