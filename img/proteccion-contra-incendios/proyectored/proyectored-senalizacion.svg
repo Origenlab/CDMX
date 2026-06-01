@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Senalizacion NOM-003 prohibicion obligacion evacuacion">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#000000"/>
+      <stop offset="40%" stop-color="#0a0a0a"/>
+      <stop offset="100%" stop-color="#1a0405"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0%" stop-color="#dc143c" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#8b0a1f" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#8b0a1f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ff1744"/>
+      <stop offset="50%" stop-color="#dc143c"/>
+      <stop offset="100%" stop-color="#8b0a1f"/>
+    </linearGradient>
+    <linearGradient id="steel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#d4d4d8"/>
+      <stop offset="100%" stop-color="#6b7280"/>
+    </linearGradient>
+    <pattern id="techgrid" patternUnits="userSpaceOnUse" width="40" height="40">
+      <path d="M 40 0 L 0 0 0 40" stroke="#dc143c" stroke-width="0.4" fill="none" opacity="0.10"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#techgrid)"/>
+  <circle cx="400" cy="200" r="280" fill="url(#glow)"/>
+  <rect x="40" y="40" width="120" height="2" fill="url(#accent)"/>
+  <rect x="640" y="408" width="120" height="2" fill="url(#accent)"/>
+  <text x="48" y="60" fill="#dc143c" font-family="Inter,sans-serif" font-size="11" font-weight="700" letter-spacing="0.3em">PROYECTO RED</text>
+  <text x="640" y="402" text-anchor="start" fill="#dc143c" font-family="Inter,sans-serif" font-size="11" font-weight="700" letter-spacing="0.3em">PROVEEDOR DIRECTO</text>
+  <g transform="translate(360 130) scale(1.5)" fill="url(#accent)">
+    <rect x="6" y="8" width="52" height="48" rx="4"/><path d="M22 20l8 8-8 8h8v8h8v-8h8l-8-8 8-8h-8v-8h-8v8z" fill="#000000"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" fill="#fff" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="800" letter-spacing="0.04em">SENALIZACION NOM-003</text>
+  <text x="400" y="402" text-anchor="middle" fill="#9ca3af" font-family="Inter,system-ui,sans-serif" font-size="13" letter-spacing="0.22em">PROHIBICION · OBLIGACION · EVACUACION</text>
+</svg>
