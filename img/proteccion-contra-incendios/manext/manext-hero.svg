@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="MANEXT desde 1943 82 anos NOM-154 +10000 clientes">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d0608"/>
+      <stop offset="50%" stop-color="#2a0508"/>
+      <stop offset="100%" stop-color="#4a0a0e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0%" stop-color="#d4a14a" stop-opacity="0.35"/>
+      <stop offset="40%" stop-color="#a01e2d" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#a01e2d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8b659"/>
+      <stop offset="100%" stop-color="#a01e2d"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbd47a"/>
+      <stop offset="100%" stop-color="#b8842d"/>
+    </linearGradient>
+    <pattern id="diag" patternUnits="userSpaceOnUse" width="20" height="20">
+      <path d="M-2 22l24-24M-2 42l24-24M-2 62l24-24" stroke="#d4a14a" stroke-width="0.5" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#diag)"/>
+  <circle cx="400" cy="200" r="260" fill="url(#glow)"/>
+  <g transform="translate(50 50)" opacity="0.12">
+    <text x="0" y="40" fill="#d4a14a" font-family="Georgia,serif" font-size="48" font-weight="700" font-style="italic">EST. 1943</text>
+  </g>
+  <g transform="translate(360 130) scale(1.5)" fill="url(#accent)">
+    <path d="M32 0c-9 0-16 7-16 16v8h-4c-5 0-8 3-8 8v6c0 3 2 5 5 5h46c3 0 5-2 5-5v-6c0-5-3-8-8-8h-4v-8c0-9-7-16-16-16zm-8 16c0-5 3-8 8-8s8 3 8 8v8H24v-8z"/><path d="M12 48v82c0 8 6 14 14 14h12c8 0 14-6 14-14V48H12zm8 16h28v6H20v-6zm0 18h28v6H20v-6zm0 18h28v6H20v-6z"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" fill="#fff" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="800" letter-spacing="0.04em">MANEXT · DESDE 1943</text>
+  <text x="400" y="402" text-anchor="middle" fill="#c89e5a" font-family="Inter,system-ui,sans-serif" font-size="13" letter-spacing="0.22em">82 ANOS · NOM-154 · +10,000 CLIENTES</text>
+</svg>
