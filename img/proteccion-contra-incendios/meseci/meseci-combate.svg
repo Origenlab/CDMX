@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Combate contra incendios gabinetes mangueras NFPA 13">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a0a14"/>
+      <stop offset="50%" stop-color="#1a0508"/>
+      <stop offset="100%" stop-color="#2d0a0e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0%" stop-color="#dc1c3a" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#dc1c3a" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#dc1c3a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ef4053"/>
+      <stop offset="100%" stop-color="#a8112a"/>
+    </linearGradient>
+    <linearGradient id="silver" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#e8e8ee"/>
+      <stop offset="100%" stop-color="#9aa0ac"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="400" cy="200" r="260" fill="url(#glow)"/>
+  <g opacity="0.08" fill="none" stroke="#dc1c3a" stroke-width="1">
+    <circle cx="400" cy="200" r="180"/>
+    <circle cx="400" cy="200" r="140"/>
+    <circle cx="400" cy="200" r="100"/>
+  </g>
+  <g transform="translate(360 130) scale(1.5)" fill="url(#accent)">
+    <rect x="6" y="0" width="52" height="100" rx="3"/><rect x="10" y="4" width="44" height="92" rx="2" fill="#0a0a14"/><circle cx="32" cy="50" r="14" fill="url(#accent)"/><path d="M22 50h20m-10-10v20" stroke="#0a0a14" stroke-width="3"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" fill="#fff" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="800" letter-spacing="0.04em">COMBATE CONTRA INCENDIOS</text>
+  <text x="400" y="402" text-anchor="middle" fill="#b8bcc8" font-family="Inter,system-ui,sans-serif" font-size="13" letter-spacing="0.22em">50+ SOLUCIONES · GABINETES · MANGUERAS</text>
+</svg>
