@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Proteccion ocular lentes googles caretas soldadura">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1a14"/>
+      <stop offset="50%" stop-color="#0f2820"/>
+      <stop offset="100%" stop-color="#1a3a2e"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.45" r="0.65">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#059669" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#059669" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbbf24"/>
+      <stop offset="50%" stop-color="#10b981"/>
+      <stop offset="100%" stop-color="#047857"/>
+    </linearGradient>
+    <linearGradient id="safety" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fde047"/>
+      <stop offset="100%" stop-color="#ca8a04"/>
+    </linearGradient>
+    <pattern id="indgrid" patternUnits="userSpaceOnUse" width="50" height="50">
+      <path d="M 50 0 L 0 0 0 50" stroke="#10b981" stroke-width="0.5" fill="none" opacity="0.10"/>
+      <path d="M 25 0 L 25 50 M 0 25 L 50 25" stroke="#fbbf24" stroke-width="0.2" fill="none" opacity="0.06"/>
+    </pattern>
+  </defs>
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <rect width="800" height="450" fill="url(#indgrid)"/>
+  <circle cx="400" cy="200" r="280" fill="url(#glow)"/>
+  <g transform="translate(40 36)">
+    <rect width="6" height="20" fill="#fbbf24"/>
+    <text x="14" y="15" fill="#fbbf24" font-family="Inter,sans-serif" font-size="11" font-weight="700" letter-spacing="0.3em">SEIND</text>
+    <text x="14" y="32" fill="#10b981" font-family="Inter,sans-serif" font-size="9" font-weight="600" letter-spacing="0.25em">SEGURIDAD INDUSTRIAL</text>
+  </g>
+  <g transform="translate(620 388)">
+    <text x="0" y="10" fill="#10b981" font-family="Inter,sans-serif" font-size="10" font-weight="700" letter-spacing="0.25em">EPP CERTIFICADO</text>
+    <rect x="0" y="14" width="60" height="2" fill="#fbbf24"/>
+  </g>
+  <g transform="translate(360 130) scale(1.5)" fill="url(#accent)">
+    <ellipse cx="32" cy="32" rx="32" ry="20"/><circle cx="32" cy="32" r="14" fill="#0a1a14"/><circle cx="32" cy="32" r="6"/>
+  </g>
+  <text x="400" y="370" text-anchor="middle" fill="#fff" font-family="Inter,system-ui,sans-serif" font-size="28" font-weight="800" letter-spacing="0.04em">PROTECCION OCULAR</text>
+  <text x="400" y="402" text-anchor="middle" fill="#a7f3d0" font-family="Inter,system-ui,sans-serif" font-size="13" letter-spacing="0.22em">LENTES · GOOGLES · CARETAS · SOLDADURA</text>
+</svg>
