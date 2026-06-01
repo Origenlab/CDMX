@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450">
+<defs>
+<linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#0a0608"/>
+<stop offset="60%" style="stop-color:#1a0d08"/>
+<stop offset="100%" style="stop-color:#2d1408"/>
+</linearGradient>
+<linearGradient id="orange" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#ff6b00"/>
+<stop offset="100%" style="stop-color:#cc4400"/>
+</linearGradient>
+<linearGradient id="copper" x1="0%" y1="0%" x2="100%" y2="100%">
+<stop offset="0%" style="stop-color:#b87333"/>
+<stop offset="100%" style="stop-color:#8b4513"/>
+</linearGradient>
+</defs>
+<rect width="800" height="450" fill="url(#bg)"/>
+<rect width="800" height="450" fill="url(#bg)" opacity="0.95"/>
+<g opacity="0.05" stroke="#ff6b00" stroke-width="1">
+<line x1="0" y1="100" x2="800" y2="100"/>
+<line x1="0" y1="200" x2="800" y2="200"/>
+<line x1="0" y1="300" x2="800" y2="300"/>
+<line x1="0" y1="400" x2="800" y2="400"/>
+</g>
+<g opacity="0.04" font-family="Georgia, serif" font-size="120" font-weight="bold" fill="#ff6b00">
+<text x="400" y="265" text-anchor="middle">NFPA 1971</text>
+</g>
+<g></g>
+<g fill="#ff6b00" font-family="system-ui, sans-serif">
+<text x="40" y="380" font-size="34" font-weight="bold" letter-spacing="2">GLOBE SUPPRESSION</text>
+<text x="40" y="412" font-size="16" fill="#b87333" letter-spacing="1">Trajes estructurales premium · 130 anos experiencia</text>
+</g>
+<rect x="30" y="30" width="120" height="36" fill="#ff6b00" rx="4"/>
+<text x="90" y="55" text-anchor="middle" font-family="system-ui" font-size="15" font-weight="bold" fill="#0a0608">BOMBERO.MX</text>
+<rect x="660" y="30" width="110" height="36" fill="none" stroke="#b87333" stroke-width="2" rx="4"/>
+<text x="715" y="55" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="bold" fill="#b87333">EST. 2010</text>
+</svg>
