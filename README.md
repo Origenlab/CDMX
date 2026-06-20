@@ -16,7 +16,7 @@
 
 ## 📋 Descripción
 
-Directorio empresarial completo y actualizado para la Ciudad de México. Más de **+453,000 empresas verificadas** en todas las alcaldías y categorías de negocio.
+Directorio empresarial completo y actualizado para la Ciudad de México. Negocios y proveedores de servicios de la Ciudad de México, organizados por alcaldía y categoría, con perfiles del portafolio OrigenLab y aliados.
 
 ### ✨ Características
 
@@ -99,8 +99,7 @@ git push origin main
 ## 📞 Contacto
 
 - 🌐 Website: [cdmx.site](https://cdmx.site)
-- 📧 Email: contacto@directorio-cdmx.com
-- 📱 Teléfono: +52 55 1234 5678
+- 📧 Email: contacto@cdmx.site
 
 ---
 

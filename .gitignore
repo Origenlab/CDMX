@@ -4,3 +4,8 @@
 node_modules/
 audit_report.json
 package-lock.json
+
+# build y temporales
+dist/
+.writetest
+.claude/
